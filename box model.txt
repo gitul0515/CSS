@@ -1,0 +1,5 @@
+- h1 태그는 화면 가로 전체를 차지한다. block level element
+- a 태그는 부분만을 차지한다. inline element
+- display: block, inline, none을 통해 박스의 크기를 조정 가능
+- border: 박스를 표시한다. 굵기, 선의 종류, 색깔. 
+             순서는 중요하지 않다. 
