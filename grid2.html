@@ -1,52 +1,53 @@
+<!DOCTYPE html>
 <html>
 <head>
-  <title>테스트 - grid2</title>
+  <title>WEB - CSS</title>
   <meta charset="utf-8">
   <style>
     body {
       margin: 0;
     }
     a {
-      color: black;
-      text-decoration: none;
+      color:black;
+      text-decoration:none;
     }
     h1 {
-      text-align: center;
-      font-size: 45px;
+      font-size:45px;
+      text-align:center;
       border-bottom: 1px gray solid;
-      padding: 20px;
       margin: 0;
+      padding: 20px;
+    }
+    #one {
+      color:red;
     }
     #grid {
       display: grid;
       grid-template-columns: 150px 1fr;
     }
     #grid ol {
-      border-right: 1px gray solid;
-      margin: 0;
+      border-right: 1px solid gray;
+      width: 100px;
+      margin: 0px;
       padding: 20px;
       padding-left: 33px;
-      width: 100px;
     }
-    #grid #article {
+    #grid #article{
       padding-left: 25px;
-    }
-    #grid #present_page {
-      color: red;
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1><a href="test.html">웹 프로그래밍</a></h1>
-
-  <div id = "grid">
+  <header>
+    <h1><a href="grid2.html">웹 프로그래밍</a></h1>
+  </header>
+  <div id="grid">
     <ol>
-      <li><a href="a1.html">HTML</a></li>
-      <li><a href="a2.html" id = "present_page">CSS</a></li>
-      <li><a href="a3.html">JavaScript</a></li>
+      <li><a href="HTML.html">HTML</a></li>
+      <li><a href="CSS.html" id="one">CSS</a></li>
+      <li><a href="JS.html">JavaScript</a></li>
     </ol>
-    <div id = "article">
+    <div id="article">
       <h2>CSS</h2>
       <p>
         종속형 시트 또는 캐스케이딩 스타일 시트
@@ -57,9 +58,5 @@
       </p>
     </div>
   </div>
-
-
-
-
 </body>
 </html>
