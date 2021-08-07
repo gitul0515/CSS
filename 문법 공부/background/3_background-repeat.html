@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 이미지 반복</title>
+    <style>
+      div {
+        width: 700px;
+        height: 200px;
+        border: 1px solid blue;
+        background-image:url('rabbit.png');
+        background-size: 50px;
+        margin: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 10px;
+      }
+      #re {
+        background-repeat: repeat;
+      }
+      #rex {
+        background-repeat: repeat-x;
+      }
+      #rey {
+        background-repeat: repeat-y;
+      }
+      #nore {
+        background-repeat: no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="re">
+      repeat는 기본값으로,<br>
+      가로 세로 반복적으로 배열합니다.
+    </div>
+    <div id="rex">
+      repeat-x는 이미지를<br>
+      가로로만 반복해서 배열합니다.
+    </div>
+    <div id="rey">
+      repeat-y는 이미지를<br>
+      세로로만 반복해서 배열합니다.
+    </div>
+    <div id="nore">
+      no-repeat는 이미지를<br>
+      반복해서 배열하지 않습니다.
+    </div>
+  </body>
+</html>

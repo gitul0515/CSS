@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>배경 이미지 고정</title>
+    <style>
+      div {
+        width: 700px;
+        height: 500px;
+        background-image: url('brabbit.png');
+        background-repeat: no-repeat;
+      }
+      #scroll {
+        background-attachment: scroll;
+      }
+      #fixed {
+        background-attachment: fixed;
+      }
+      #local {
+        background-attachment: local;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background-attachment</h1>
+    <p>배경 이미지를 어떻게 고정할지 결정하는 속성</p>
+    <div id="scroll">
+      <h2>scroll</h2>
+      <p>기본값. 이미지가 요소에 상대적인 위치.<br>
+      (스크롤바를 내리면 이미지 위치가 위로 올라간다)</p>
+    </div>
+    <div id="fixed">
+      <h2>fixed</h2>
+      <p>이미지가 윈도우 창에 상대적인 위치.<br>
+      (스크롤바를 내려도 이미지 위치가 그대로이다)</p>
+    </div>
+    <div id="local">
+      <h2>local</h2>
+      <p>스크롤할 때 요소의 내용에 상대적인 위치.<br>
+      (많이 사용되지 않는다)</p>
+    </div>
+  </body>
+</html>

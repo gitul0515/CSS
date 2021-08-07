@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>배경 이미지 위치 지정</title>
+    <style>
+      body {
+        border: 1px solid purple;
+        background-image: url('brabbit.png'), url('brabbit.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: left top, right bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>background-position</h1>
+    <p>
+      배경 이미지의 위치를 지정하는 속성
+    </p>
+    <div>
+      <h2>가로</h2>
+      <p>left  center  right</p>
+    </div>
+    <div>
+      <h2>세로</h2>
+      <p>
+        top<br>
+        center<br>
+        bottom
+      </p>
+    </div>
+    <ul>
+      <li>두 가지 중 하나만 쓰면 나머지는 자동으로 center가 됨.</li>
+      <li>cm, px, in, pt, px, ex 등의 단위와 섞어서 지정도 가능.</li>
+    </ul>
+  </body>
+</html>
