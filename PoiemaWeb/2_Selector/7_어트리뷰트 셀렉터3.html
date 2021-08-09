@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* h1 요소 중에 title 어트리뷰트 값에 first를 단어로 포함하는 요소 */
+        h1[title~="first"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1 title="Heading first">Heading first</h1>
+    <h1 title="Heading-first">Heading-first</h1>
+    <h1 title="Heading second">Heading second</h1>
+    <h1 title="Heading third">Heading third</h1>
+</body>
+</html>
