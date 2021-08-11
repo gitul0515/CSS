@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /* input 요소가 사용 가능한 상태일 때,
+           input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+        input:enabled + span{
+            color: blue;
+        }
+        /* input 요소가 사용 불가능한 상태일 때,
+           input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+        input:disabled + span{
+            color: gray;
+            text-decoration: line-through;
+        }
+        /* input 요소가 체크 상태일 때,
+           input 요소 바로 뒤에 위치하는 인접 형제 span 요소를 선택 */
+        input:checked + span{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" value=male name=gender checked><span>Male</span><br>
+    <input type="radio" value=female name=gender><span>Female</span><br>
+    <input type="radio" value=nueter name=gender disabled><span></span>Nueter</span><br><br>
+
+    <input type="checkbox" value=science name=subject checked><span>Science</span><br>
+    <input type="checkbox" value=math name=subject><span>Math</span><br>
+    <input type="checkbox" value=english name=subject disabled><span>English</span><br>
+</body>
+</html>
