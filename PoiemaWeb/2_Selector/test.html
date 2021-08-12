@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <style>
-    p:first-of-type{
-      color: red;
-    }
-    p:last-of-type{
-      color: blue;
-    }
-    p:nth-of-type(2){
-      color: green;
-    }
-    p:nth-last-of-type(2){
-      color: orange;
-    }
-    p:first-child{
-      background-color: brown;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <style>
+      input:enabled + span{
+        color: blue;
+      }
+      input:disabled + span{
+        color: gray;
+        text-decoration: line-through;
+      }
+      input:checked + span{
+        color: red;
+      }
+    </style>
 </head>
 <body>
-  <h1>This is a heading</h1>
-  <p>The first paragraph.</p>
-  <p>The second paragraph.</p>
-  <p>The third paragraph.</p>
-  <p>The fourth paragraph.</p>
-  <a href="#">test</a>
-
-  <div>
-    <h1>This is a heading</h1>
-    <p>The first paragraph.</p>
-    <p>The second paragraph.</p>
-    <p>The third paragraph.</p>
-    <p>The fourth paragraph.</p>
-    <a href="#">test</a>
-  </div>
+  <input type="radio" value="male" name="gender" checked><span>male</span><br>
+  <input type="radio" value="female" name="gender"><span>female</span><br>
+  <input type="radio" value="neurter" name="gender" disabled><span>neurter</span><br><br>
+   
+  <input type="checkbox" value="컴퓨터 알고리즘" name="subject" checked><span>컴퓨터 알고리즘</span><br>
+  <input type="checkbox" value="데이터베이스" name="subject"><span>데이터베이스</span><br>
+  <input type="checkbox" value="인간공학과실습" name="subject" disabled><span>인간공학과실습</span><br>
 </body>
 </html>
