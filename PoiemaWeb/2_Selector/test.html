@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <style>
-      input:enabled + span{
+      p::first-letter{
+        font-size: 3em;
+      }
+      p::first-line{
+        color: red;
+      }
+      h1::before{
+        content: "HTML!!! ";
         color: blue;
       }
-      input:disabled + span{
-        color: gray;
-        text-decoration: line-through;
-      }
-      input:checked + span{
+      h1::after{
+        content: " CSS!!!";
         color: red;
+      }
+      ::selection{
+        color: red;
+        background-color: yellow;
       }
     </style>
 </head>
 <body>
-  <input type="radio" value="male" name="gender" checked><span>male</span><br>
-  <input type="radio" value="female" name="gender"><span>female</span><br>
-  <input type="radio" value="neurter" name="gender" disabled><span>neurter</span><br><br>
-   
-  <input type="checkbox" value="컴퓨터 알고리즘" name="subject" checked><span>컴퓨터 알고리즘</span><br>
-  <input type="checkbox" value="데이터베이스" name="subject"><span>데이터베이스</span><br>
-  <input type="checkbox" value="인간공학과실습" name="subject" disabled><span>인간공학과실습</span><br>
+  <h1>This is a heading</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Explicabo illum sunt distinctio sed, tempore, repellat rerum et 
+    ea laborum voluptatum! Quisquam error fugiat debitis maiores officiis, 
+    tenetur ullam amet in!
+  </p>
 </body>
 </html>
