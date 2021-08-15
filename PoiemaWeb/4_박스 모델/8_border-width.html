@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /*
+          border-width 프로퍼티는 테두리의 두께를 지정한다.
+          border-style과 함께 사용해야 적용할 수 있다.
+        */
+        p {
+            background-color: palegreen;
+            padding: 10px;
+            border-style: solid;
+        }
+        p.zero {
+            border-width: initial;
+        }
+        p.one {
+            border-width: thin;
+        }
+        p.two {
+            border-width: medium;
+        }
+        p.three {
+            border-width: thick;
+        }
+        p.four {
+            border-width: 15px;
+        }
+        p.five {
+            border-width: 2px 10px 4px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>border-width Property</h2>
+    <p class="zero">initial: 3px</p>
+    <p class="one">thin: 1px</p>
+    <p class="two">medium: 3px</p>
+    <p class="three">thick: 5px</p>
+    <p class="four">15px</p>
+    <p class="five">2px 10px 4px 20px</p>
+</body>
+</html>
