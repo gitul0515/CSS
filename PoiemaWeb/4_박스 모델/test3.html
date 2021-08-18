@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        /*
+          프로퍼티 값의 갯수에 따라 4개 방향
+          (top, right, left, bottom)에 대하여 지정이 가능하다.
+        */
+        p {
+            background-color: palegreen;
+            padding: 10px;
+        }
+        p.one {
+            border-style: dashed;
+        }
+        p.two {
+            border-style: dotted solid;
+        }
+        p.three {
+            border-style: hidden double dashed;
+        }
+        p.four {
+            border-style: none solid dotted dashed;
+        }
+    </style>
+</head>
+<body>
+    <p class="one">border-style: dashed;</p>
+    <p class="two">border-style: dotted solid;</p>
+    <p class="three">border-style: hidden double dashed;</p>
+    <p class="four">border-style: none solid dotted dashed;</p>
+</body>
+</html>
