@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box, img {
+            float: left;
+            width: 150px;
+            height: 150px;
+            margin: 30px;
+            background-color: blue;
+            color: white;
+            text-align: center;
+            opacity: 0.5;
+            transition: opacity 1s;
+        }
+        .text {
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        div:hover, img:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"><div class="text">opacity: 0.5</div></div>
+    <img src="https://poiemaweb.com/img/doug.jpg" alt="Dog">
+</body>
+</html>

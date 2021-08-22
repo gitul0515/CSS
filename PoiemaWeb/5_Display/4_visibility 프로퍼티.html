@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .visible {
+            visibility: visible;     /* 기본값 */
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        .none {
+            display: none;
+        }
+
+        table, td {
+            border: 1px solid black;
+        }
+        .collapse {
+            visibility: collapse;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="visible">visibility: visible</h1>
+    <h1 class="hidden">visibility: hidden</h1>
+    <h1 class="none">display: none</h1>
+
+    <table>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+        </tr>
+        <tr class="collapse">
+            <td>C</td>
+            <td>D</td>
+        </tr>
+    </table>
+</body>
+</html>
