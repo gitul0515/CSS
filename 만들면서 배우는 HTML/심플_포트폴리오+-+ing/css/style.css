@@ -1,0 +1,78 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+.bx-wrapper, .bx-viewport, .slider {
+    width: 100%;
+    height: 100%;
+}
+.background_01 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/a.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.background_02 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/b.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.background_03 {
+    width: 100%;
+    height: 100%;
+    background: url('../images/c.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.overlay {
+    width: 100%;
+    height: 100%;
+    background: url('../images/16.png');
+    position: absolute;
+    top: 0;
+    z-index: 10;
+}
+.contents {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -109.5px;   /* 세로(219px)의 절반값을 뺀다 */
+    margin-left: -232px;    /* 가로(464px)의 절반값을 뺀다 */
+    z-index: 20;
+    text-align: center;
+    font-family: "Malgun Gothic", sans-serif;
+}
+.contents_name {
+    font-size: 64px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 25px;
+}
+.contents_job {
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 50px;
+}
+.contents_list {
+    font-size: 0;
+}
+.contents_list > li{
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    border: 1px solid white;
+    border-radius: 50%;
+    font-size: 27px;
+    margin-right: 20px;
+}
+.contents_list > li:last-child{
+    margin-right: 0;
+}
+.contents_list > li > a {
+    color: white;
+}
