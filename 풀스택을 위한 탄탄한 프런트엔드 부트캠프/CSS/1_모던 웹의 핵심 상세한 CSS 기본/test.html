@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type="radio"]:indeterminate + span {
+            color: red;
+        }
+        input[type="radio"]:checked + span {
+            color: orange;
+        }
+        input[type="checkbox"]:enabled + span {
+            color: blue;
+        }
+        input[type="checkbox"]:disabled + span {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dave Lee</h1>
+    </header>
+    <section>
+        <article>
+            <a href="#">잔재미코딩</a>
+            <form action="#" method="get">
+                <input type="radio" value="item1" name="item"><span>item1</span><br>
+                <input type="radio" value="item2" name="item"><span>item2</span><br>
+                <input type="checkbox" value="check1" name="check"><span>check1</span><br>
+                <input type="checkbox" value="check2" name="check" disabled><span>check2</span><br>
+                <input type="text" name="data" autofocus><br>
+                <input type="submit" value="submit">
+            </form>
+        </article>
+    </section>
+</body>
+</html>
