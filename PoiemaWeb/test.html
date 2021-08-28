@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            div {
+                width: 100px;
+                height: 50px;
+                margin-bottom: 10px;
+                background-color: red;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                text-align: center;
+                line-height: 50px;
+            }
+            div:nth-child(1) {
+                transition: width 1s ease-in 1s;
+            }
+            div:nth-child(2) {
+                transition: 1s;
+            }
+            div:nth-child(3) {
+                transition: width 1s;
+            }
+            div:nth-child(4) {
+                transition: 1s ease-in;
+            }
+            div:nth-child(5) {
+                transition: 1s 1s;
+            }
+            div:hover {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>width 1s ease-in 1s</div>
+        <div>1s</div>
+        <div>width 1s</div>
+        <div>1s ease-in</div>
+        <div>1s 1s</div>
+    </body>
+</html>
