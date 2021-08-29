@@ -2,76 +2,41 @@
 <html>
     <head>
         <style>
-            .box {
-                width: 95px;
-                height: 95px;
-                line-height: 95px;
-                text-align: center;
-                float: left;
-                border-radius: 6px;
-            }
-            .original {
-                background-color: gainsboro;
-                border: 1px dashed rgb(187, 184, 184);
-                margin: 30px;
-            }
-            .child {
-                background-color: rgb(9, 158, 9);
+            .container {
+                background-color: wheat;
                 color: white;
-                cursor: pointer;
+                text-align: center;
+                padding: 10px;
             }
-            .translate {
-                transform: translate(10px, 55px);
+            .clearFix:after {
+                content: "";
+                display: block;
+                clear: both;
             }
-            .scale {
-                transform: scale(0.75);
+            .box1, .box2 {
+                width: 50%;
+                float: left;
+                padding: 20px 0px;
             }
-            .skew {
-                transform: skew(-5deg, 20deg);
+            .box1 {
+                background-color: blue;
             }
-            .rotate {
-                transform: rotate(70deg);
+            .box2 {
+                background-color: red;
             }
-            .complex {
-                transform: scale(.6) rotate(80deg);
-            }
-            .translate:hover {
-                transition: transform 1s linear;
-                transform: translate(0, 0);
-            }
-            .scale:hover {
-                transition: transform 1s linear;
-                transform: scale(1);
-            }
-            .skew:hover {
-                transition: transform 1s linear;
-                transform: skew(0, 0);
-            }
-            .rotate:hover {
-                transition: transform 1s linear;
-                transform: rotate(0);
-            }
-            .complex:hover {
-                transition: transform 1s linear;
-                transform: scale(1) rotate(0);
+            .box3 {
+                background-color: turquoise;
+                color: white;
+                text-align: center;
+                padding: 20px 0px;
             }
         </style>
     </head>
     <body>
-        <div class="original box">
-            <div class="child box translate">translate</div>
+        <div class="container clearFix">
+            <div class="box1">1</div>
+            <div class="box2">2</div>
         </div>
-        <div class="original box">
-            <div class="child box scale">scale</div>
-        </div>
-        <div class="original box">
-            <div class="child box skew">skew</div>
-        </div>
-        <div class="original box">
-            <div class="child box rotate">rotate</div>
-        </div>
-        <div class="original box">
-            <div class="child box complex">complex</div>
-        </div>
+        <div class="box3">3</div>
     </body>
 </html>
