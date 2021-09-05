@@ -1,0 +1,6 @@
+<Block-level element>
+: p, div, ul, ol, li, form, h1, h2, h3, h4, h5, h6, header, section, article, aside, footer, table, address,  audio, blockquote, canvas, dd, dl, fieldset, figcaption, figure,  hgroup, hr, noscript, output, pre,  video
+
+
+<Inline element>
+: a, br, img, input, button, span, textarea, label, strong, script, select, var, abbr, acronym, b, bdo, big, cite, code, dfn, em, i, kbd, map, object, q, samp, small, sub, sup, tt

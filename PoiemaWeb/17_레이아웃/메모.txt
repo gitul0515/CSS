@@ -1,0 +1,3 @@
+<header>
+- a 태그를 inline-block으로 변환
+  img 태그가 아니라 a 태그에 스타일 적용
