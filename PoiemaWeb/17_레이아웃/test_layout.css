@@ -10,14 +10,20 @@ li {
 a {
     text-decoration: none;
 }
-
+h1 { font-size: 1.8em; }
+h1, h2, h3, h4, h5, h6, p {
+    margin: 10px 5px;
+}
+#wrap {
+    width: 100%;
+    margin-top: 60px;
+}
 /* body */
 body {
     font-family: "Helvetica Neue", Helvetica, arial, sans-serif;
     background-color: lemonchiffon;
     color: #58666e;
 }
-
 /* Header */
 header {
     position: fixed;
@@ -34,7 +40,7 @@ header {
     height: 36px;
     padding: 12px 0 12px 25px;
 }
-.logo>img {
+.logo > img {
     display: inherit;
     height: 36px;
 }
@@ -54,4 +60,60 @@ nav {
 }
 .nav_items > li > a:hover {
     color:rgba(0, 0, 0, 0.8);
+}
+
+/* contents */
+/* clearFix */
+#content-wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* aside */
+aside {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    width: 200px;
+    padding-top: 25px;
+    background-color: #333;
+}
+aside > ul {
+    width: 200px;
+}
+aside > ul > li > a {
+    display: block;
+    padding: 10px 0 10px 20px;
+    color: #fff;    
+}
+aside > ul > li > a.active {
+    background-color: rgb(26, 153, 26);
+}
+aside > ul > li > a:hover:not(.active) {
+    background-color: rgb(87, 86, 86);
+}
+aside> h1 {
+    color: #fff;
+    padding: 20px 0 20px 20px;
+}
+/* section */
+section {
+    float: right;
+    margin-left: 200px;
+}
+section > article {
+    margin: 10px;
+    padding: 25px;
+    background-color: #fff;
+}
+/* footer */
+footer {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    padding: 0 25px;
+    line-height: 60px;
+    background-color: whitesmoke;
+    color:rgb(87, 86, 86);
+    border-top: 1px solid rgb(224, 214, 214);
 }

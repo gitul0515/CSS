@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout Example</title>
+  <style>
+    .flex-container {
+      margin: 10px;
+      padding: 15px;
+      border-radius: 5px;
+      background: #60B99A;
+      display: flex;
+    }
+    .row {
+      flex-direction: row;
+    }
+    .row-reverse {
+      flex-direction: row-reverse;
+    }
+    .column {
+      flex-direction: column;
+    }
+    .column-reverse {
+      flex-direction: column-reverse;
+    }
+
+    .flex-item {
+      margin: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: center;
+      border-radius: 5px;
+      background: #4584b1;
+    }
+  </style>
+</head>
+<body>
+  <h2>flex-direction: row</h2>
+  <div class="flex-container row">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+  <h2>flex-direction: row-reverse</h2>
+  <div class="flex-container row-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+  <h2>flex-direction: coulumn</h2>
+  <div class="flex-container coulumn">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+  <h2>flex-direction: coulumn-reverse</h2>
+  <div class="flex-container coulumn-reverse">
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+</body>
+</html>
