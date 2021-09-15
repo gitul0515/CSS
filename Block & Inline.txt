@@ -3,4 +3,4 @@
 
 
 <Inline element>
-: a, br, img, input, button, span, textarea, label, strong, script, select, var, abbr, acronym, b, bdo, big, cite, code, dfn, em, i, kbd, map, object, q, samp, small, sub, sup, tt
+: a, i, br, img, input, button, span, textarea, label, strong, script, select, var, abbr, acronym, b, bdo, big, cite, code, dfn, em, kbd, map, object, q, samp, small, sub, sup, tt

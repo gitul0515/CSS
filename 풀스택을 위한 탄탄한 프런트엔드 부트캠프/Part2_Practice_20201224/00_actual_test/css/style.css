@@ -33,6 +33,7 @@ a:hover {
     height: 100%;
     margin: 0 auto;
     padding: 0 2rem;
+    overflow: hidden;
 }
 
 /* 헤더 영역 */
@@ -120,6 +121,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding: 1rem 0;
 }
 
 .skill {
@@ -206,7 +208,11 @@ section {
 
 .class-list {
     display: flex;
+    overflow: hidden;
+
+    /* li 스타일 초기화 */
     list-style: none; 
+    padding: 1rem 0;
 }
 
 .class-card {
@@ -217,7 +223,7 @@ section {
 }
 
 .class-image {
-    width: 100%;
+    width: 240px;
     height: 150px;
     border-radius: 8px 8px 0 0 ;
 }
@@ -243,6 +249,28 @@ section {
     color: #fff;
     background-color: #0d47a1;
     padding: 0.2rem;
+}
+
+.class-desc {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.class-title {
+    font-weight: bold;
+    color: #545e6f;
+    margin-bottom: 0.5rem;
+
+    /* 말 줄임표를 위한 설정 */
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.class-detail {
+    font-size: 0.9rem;
+    color: #545e6f;
 }
 
 /* 미디어 쿼리 설정 */

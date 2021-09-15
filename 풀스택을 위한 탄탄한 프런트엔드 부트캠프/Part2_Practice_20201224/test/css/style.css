@@ -116,9 +116,110 @@ section {
     line-height: 2rem;
 }
 
+/* 스킬 이미지 섹션 */
+.skill-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.skill {
+    width: 25%;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    border-radius: 9px;
+    box-shadow: 10px 10px 10px -5px #c4c9cf;
+    display: flex;
+    align-items: center;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin: 0 10px;
+}
+
+.python-style {
+    color: #2186c4;;
+}
+
+.analysis-style {
+    color: #ff8066;
+}
+
+.ai-style {
+    color: #f7df1e;
+}
+
+.vue-style {
+    color: #2e7d32;
+}
+
+.skill-title {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.skill-maintitle {
+    font-weight: bold;
+    color: #545e6f;
+    margin-bottom: 0.2rem;
+}
+
+.skill-subtitle {
+    font-size: 0.9rem;
+    color: #545e6f;
+}
+
+/* 로드맵 이미지 섹션 */
+.roadmap-container {
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.roadmap-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.roadmap-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #545e6f;
+}
+
+.arrow-container {
+    display: flex;
+}
+
+.slide-prev {
+    font-size: 2rem;
+    cursor: pointer;
+    color: rgb(47, 48, 89);
+}
+
+.slide-next {
+    font-size: 2rem;
+    cursor: pointer;
+    color: #cfd8dc;
+}
+
 /* 미디어 쿼리 */
 @media only screen and (min-width: 1200px) {
     .inner {
         max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    .skill-container {
+        display: none;
     }
 }
