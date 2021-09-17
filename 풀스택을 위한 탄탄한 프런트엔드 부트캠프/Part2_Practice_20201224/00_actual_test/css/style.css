@@ -133,6 +133,11 @@ section {
     padding: 0.5rem 1rem;
     margin: 0 1rem;
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translate(0, -5px);
 }
 
 .skill-icon {
@@ -174,7 +179,7 @@ section {
 /* 로드맵 섹션 */
 .roadmap-container {
     width: 100%;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .roadmap-title-container {
@@ -188,6 +193,10 @@ section {
     font-size: 1.3rem;
     font-weight: bold;
     color: #545e6f;
+}
+
+.roadmap-title-dsc {
+    display: visible;
 }
 
 .arrow-container {
@@ -213,6 +222,7 @@ section {
     /* li 스타일 초기화 */
     list-style: none; 
     padding: 1rem 0;
+    margin: 0;
 }
 
 .class-card {
@@ -220,6 +230,16 @@ section {
     box-shadow: 10px 10px 10px -5px rgba(25, 42, 70, 0.2);
     border: 8px;
     margin: 0 10px;
+    transition: 0.3s;
+}
+
+.class-card:hover {
+    box-shadow: -10px 10px 20px -5px rgba(25, 42, 70, 0.2);
+    transform: translate(0, -5px);
+}
+
+li a {
+    cursor: pointer;
 }
 
 .class-image {
@@ -271,6 +291,7 @@ section {
 .class-detail {
     font-size: 0.9rem;
     color: #545e6f;
+    line-height: 1.5rem;
 }
 
 /* 미디어 쿼리 설정 */
@@ -282,6 +303,9 @@ section {
 
 @media only screen and (max-width: 980px) {
     .skill-container {
+        display: none;
+    }
+    .roadmap-title-dsc {
         display: none;
     }
 }

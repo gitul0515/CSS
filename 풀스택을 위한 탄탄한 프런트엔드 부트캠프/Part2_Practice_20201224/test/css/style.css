@@ -46,6 +46,7 @@ header {
     margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    overflow: hidden;
 }
 
 .head-container {
@@ -123,7 +124,7 @@ section {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 .skill {
@@ -191,24 +192,89 @@ section {
 
 .roadmap-title {
     font-size: 1.3rem;
+    color:#545e6f; 
     font-weight: bold;
-    color: #545e6f;
 }
 
 .arrow-container {
     display: flex;
 }
 
-.slide-prev {
+.prev-arrow {
     font-size: 2rem;
-    cursor: pointer;
     color: rgb(47, 48, 89);
+    cursor: pointer;
 }
 
-.slide-next {
+.next-arrow {
     font-size: 2rem;
-    cursor: pointer;
     color: #cfd8dc;
+    cursor: pointer;
+}
+
+.class-list {
+    display: flex;
+    list-style: none;
+    padding: 1rem 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.class {
+    width: 240px;
+    box-shadow: 10px 10px 10px -5px #c4c9cf;
+    border-radius: 8px;
+    margin: 0 10px;
+}
+
+.class-image {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height: 150px;
+}
+
+.class-container {
+    width: 100%;
+    padding: 0.5rem 1rem 1rem 1rem;
+}
+
+.class-format-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.class-format1 {
+    font-size: 0.9rem;
+    color: #949393;
+    padding: 0.2rem 0;
+}
+
+.class-format2 {
+    font-size: 0.9rem;
+    color: #fff;
+    background-color: #0d47a1;;
+    padding: 0.2rem;
+}
+
+.class-dsc-container {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.class-main-dsc {
+    color: #545e6f;
+    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.5rem;
+}
+
+.class-sub-dsc {
+    font-size: 0.9rem; 
+    color: #545e6f;
 }
 
 /* 미디어 쿼리 */
