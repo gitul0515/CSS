@@ -136,6 +136,11 @@ section {
     box-shadow: 10px 10px 10px -5px #c4c9cf;
     display: flex;
     align-items: center;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: translate(0, -5px);
 }
 
 .skill-icon {
@@ -181,6 +186,7 @@ section {
 .roadmap-container {
     width: 100%;
     margin-top: 2rem;
+    overflow: hidden;
 }
 
 .roadmap-title-container {
@@ -191,8 +197,8 @@ section {
 }
 
 .roadmap-title {
-    font-size: 1.3rem;
-    color:#545e6f; 
+    color: #545e6f;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
@@ -200,41 +206,49 @@ section {
     display: flex;
 }
 
-.prev-arrow {
+.arrow-prev {
     font-size: 2rem;
-    color: rgb(47, 48, 89);
+    color:rgb(47, 48, 89);
     cursor: pointer;
 }
 
-.next-arrow {
+.arrow-next {
     font-size: 2rem;
-    color: #cfd8dc;
+    color:#cfd8dc;
     cursor: pointer;
 }
 
-.class-list {
+.class-list-container {
     display: flex;
     list-style: none;
-    padding: 1rem 0;
-    margin: 0;
-    overflow: hidden;
-}
-
-.class {
-    width: 240px;
-    box-shadow: 10px 10px 10px -5px #c4c9cf;
-    border-radius: 8px;
-    margin: 0 10px;
-}
-
-.class-image {
-    width: 100%;
-    border-radius: 8px 8px 0 0;
-    height: 150px;
+    margin: 1rem 0;
+    padding: 0;
 }
 
 .class-container {
-    width: 100%;
+    width: 240px;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+    box-shadow: 10px 10px 10px -3px #c4c9cf;
+    margin: 0 0.7rem;
+    transition: 0.3s;
+}
+
+.class-container:hover {
+    transform: translate(0, -5px);
+}
+
+.class-container a {
+    cursor: pointer;
+}
+
+.class-img {
+    width: 240px;
+    height: 150px;
+    border-radius: 8px 8px 0 0;
+}
+
+.class-dsc-container {
     padding: 0.5rem 1rem 1rem 1rem;
 }
 
@@ -244,36 +258,36 @@ section {
     align-items: center;
 }
 
-.class-format1 {
+.format1 {
     font-size: 0.9rem;
     color: #949393;
-    padding: 0.2rem 0;
 }
 
-.class-format2 {
+.format2 {
     font-size: 0.9rem;
     color: #fff;
-    background-color: #0d47a1;;
+    background-color: #0d47a1;
     padding: 0.2rem;
 }
 
-.class-dsc-container {
+.class-dsc {
     width: 100%;
     margin-top: 1rem;
 }
 
-.class-main-dsc {
-    color: #545e6f;
+.class-dsc1 {
     font-weight: bold;
+    color: #545e6f;
+    margin-bottom: 0.5rem;
+
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-bottom: 0.5rem;
 }
 
-.class-sub-dsc {
-    font-size: 0.9rem; 
+.class-dsc2 {
+    font-size: 0.9rem;
     color: #545e6f;
 }
 
@@ -286,6 +300,9 @@ section {
 
 @media only screen and (max-width: 980px) {
     .skill-container {
+        display: none;
+    }
+    .roadmap-title span {
         display: none;
     }
 }
