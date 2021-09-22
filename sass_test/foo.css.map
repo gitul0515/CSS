@@ -1,1 +1,9 @@
-{"version":3,"sourceRoot":"","sources":["foo.scss"],"names":[],"mappings":"AAOA;EACI,OAPS;EAWP,WARM;EASN,aAVQ;EAaV,aAXU;;;AAcZ;EACE;EACA,WArBa","file":"foo.css"}
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,IAAI,CAAC;EACD,KAAK,EAPI,IAAI;EAWX,SAAI,EARE,IAAI;EASV,WAAM,EAVE,KAAK,EAAE,UAAU;EAa3B,WAAW,EAXD,IAA6B;CAYxC;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,SAAS,EArBI,KAAK;CAsBnB",
+    "sources": [
+        "foo.scss"
+    ],
+    "names": [],
+    "file": "foo.css"
+}
