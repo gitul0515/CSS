@@ -1,0 +1,2 @@
+alt + w
+Beautify selection: ctrl + alt + z
