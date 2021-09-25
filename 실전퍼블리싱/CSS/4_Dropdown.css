@@ -1,0 +1,49 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  color: #000;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.dropdown {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.dropdown-btn {
+  width: inherit;
+  padding: 10px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-color: yellowgreen;
+  color: #fff;
+  cursor: pointer;
+}
+
+.dropdown-sub {
+  display: none;
+  width: inherit;
+  box-shadow: 0 0 0 0 rgb(65, 65, 65);
+}
+
+.dropdown-sub a {
+  display: block;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.dropdown-sub a:hover {
+  background-color: rgb(236, 236, 238);
+}
+
+.dropdown:hover .dropdown-sub {
+  display: block;
+}
