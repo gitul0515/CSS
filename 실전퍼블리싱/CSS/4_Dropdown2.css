@@ -1,0 +1,65 @@
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.dropdown-container {
+  display: flex;
+  position: relative;
+  top: 30%;
+}
+
+.dropdown {
+  width: 180px;
+  margin: 3px;
+}
+
+.dropdown-btn {
+  font-size: 1.1rem;
+  width: inherit;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: yellowgreen;
+  color: hsl(0, 0%, 100%);
+}
+.dropdown-submenu {
+  display: none;
+  box-shadow: 0 0 10px -3px rgb(124, 122, 122);
+}
+.dropdown-submenu a {
+  display:block;
+  width: inherit;
+  padding: 5px;
+  text-align: center;
+}
+
+.dropdown-submenu a:hover {
+  background-color: rgb(226, 225, 224);
+}
+.dropdown:nth-child(1):hover .dropdown-submenu {
+  display: block;
+}
+.dropdown:nth-child(2):hover .dropdown-submenu {
+  display: block;
+}
+.dropdown:nth-child(3):hover .dropdown-submenu {
+  display: block;
+}
+.dropdown:nth-child(4):hover .dropdown-submenu {
+  display: block;
+}
