@@ -1,0 +1,52 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0;
+  height: 100vh;
+  background-color: royalblue;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); 
+  left: 5%;
+}
+
+.nav a {
+  font-size: 40px;
+  margin: 30px 0;
+  display: block;
+  color: white;
+  transition: 0.5s;
+}
+
+.nav:hover a {
+  opacity: 0.3;
+}
+
+.nav a:hover {
+  opacity: 1;
+}
+
+.nav a::before {
+  content: '\f105';
+  font-family: fontawesome;
+  margin-right: 10px;
+  opacity: 0;
+  /* transition: 0.5s; */
+}
+
+.nav a:hover::before {
+  opacity: 1;
+}
