@@ -1,0 +1,64 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #222;
+  line-height: 1.5em;
+  font-weight: 300;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+a {
+  color: #222;
+  text-decoration: none;
+}
+
+.gnb {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 600px;
+  border-radius: 5px;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px 20px;
+  /* display: flex; */
+}
+
+.gnb li {
+  /* 전통적인 방법 */
+  float: left;
+  width: 120px;
+  text-align: center;
+
+  /* 최신 방법: 플렉스 */
+  /* flex: 1;
+  text-align: center; */
+}
+
+.gnb li a {
+  font-size: 16px;
+  position: relative;
+}
+
+.gnb li a:before {
+  content: '';
+  position: absolute;
+  background-color: dodgerblue;
+  height: 2px;
+  width: 0px;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;  
+}
+
+.gnb li a:hover:before {
+  width: 100%;
+}
