@@ -64,3 +64,18 @@ a {
   color: gray;
 }
 
+/* sign-up2 */
+.sign-up2 .item input {
+  padding-left: 68px;
+}
+
+.sign-up2 .item .fas {
+  color: #fff;
+  background-color: gray;
+  border-radius: 5px 0 0 5px;
+}
+
+.sign-up2 .item input:focus + .fas {
+  background-color: dodgerblue;
+  color: #fff;
+}
