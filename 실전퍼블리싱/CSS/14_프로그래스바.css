@@ -24,7 +24,7 @@ a {
   width: 350px;
   padding: 32px 20px 32px 20px;
   border-radius: 5px;
-  box-shadow: 0 20px 5px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
 }
 
 .skill-box h1 {
@@ -58,6 +58,7 @@ a {
   background: linear-gradient(to right, crimson, gold);
   animation-name: ani;
   animation-duration: 1s;
+  animation-fill-mode: both;
 }
 
 @keyframes ani {
@@ -66,3 +67,19 @@ a {
   }  
 }
 
+/* animation delay */
+.skill-box .item:nth-of-type(1) .skill-progress-bar {
+  animation-delay: 0s;
+}
+.skill-box .item:nth-of-type(2) .skill-progress-bar {
+  animation-delay: 0.2s;
+}
+.skill-box .item:nth-of-type(3) .skill-progress-bar {
+  animation-delay: 0.4s;
+}
+.skill-box .item:nth-of-type(4) .skill-progress-bar {
+  animation-delay: 0.6s;
+}
+.skill-box .item:nth-of-type(5) .skill-progress-bar {
+  animation-delay: 0.8s;
+}
