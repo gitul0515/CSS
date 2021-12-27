@@ -1,0 +1,60 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* .container {} */
+
+input[id=trigger] {
+  display: none;
+}
+
+label[for=trigger] {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+label[for=trigger] span {
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  transition: 0.2s;
+}
+
+label[for=trigger] span:nth-child(1) {
+  top: 0%;
+}
+label[for=trigger] span:nth-child(2) {
+  top: 50%;
+}
+label[for=trigger] span:nth-child(3) {
+  top: 100%;
+}
+
+input[id=trigger]:checked + label[for=trigger] span:nth-child(1) {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+input[id=trigger]:checked + label[for=trigger] span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id=trigger]:checked + label[for=trigger] span:nth-child(3) {
+  top: 50%;
+  transform: rotate(-45deg);
+}
