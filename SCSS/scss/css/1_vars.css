@@ -3,32 +3,32 @@ body {
 }
 
 #box1 {
-  color: red;
-  background-color: blue;
+  color: #e21a1a;
+  background-color: #1fe;
   width: 100px;
 }
 
 #box2 {
-  color: yellow;
-  background-color: blue;
+  color: #dfdf10;
+  background-color: #1fe;
   width: 100px;
 }
 
 #box3 {
-  color: red;
-  background-color: blue;
+  color: #e21a1a;
+  background-color: #1fe;
   width: 100px;
 }
 
 #box4 {
-  color: yellowgreen;
-  background-color: blue;
+  color: #98d819;
+  background-color: #1fe;
   width: 300px;
 }
 
 #box5 {
-  color: red;
-  background-color: blue;
+  color: #e21a1a;
+  background-color: #1fe;
   width: 300px;
 }
 /*# sourceMappingURL=1_vars.css.map */

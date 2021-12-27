@@ -1,29 +1,34 @@
+$bg-color: #1fe;
+$red: #e21a1a;
+$yellow: #dfdf10;
+$lightGreen: #98d819;
+
 body {
   background-color: #ddd;
 }
 
 #box1 {
-  color: red;
-  background-color: blue;
+  color: $red;
+  background-color: $bg-color;
   width: 100px;
 }
 #box2 {
-  color: yellow;
-  background-color: blue;
+  color: $yellow;
+  background-color: $bg-color;
   width: 100px;
 }
 #box3 {
-  color: red;
-  background-color: blue;
+  color: $red;
+  background-color: $bg-color;
   width: 100px;
 }
 #box4 {
-  color: yellowgreen;
-  background-color: blue;
+  color: $lightGreen;
+  background-color: $bg-color;
   width: 300px;
 }
 #box5 {
-  color: red;
-  background-color: blue;
+  color: $red;
+  background-color: $bg-color;
   width: 300px;
 }
