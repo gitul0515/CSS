@@ -5,9 +5,7 @@ body {
   font-family: 'Raleway', sans-serif;
   line-height: 1.5em;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin: 0;
 }
 
 a {
@@ -16,6 +14,7 @@ a {
 
 .container {}
 
+/* Button */
 input[id=trigger] {
   display: none;
 }
@@ -24,8 +23,11 @@ label[for=trigger] {
   display: inline-block;
   width: 20px;
   height: 20px;
-  position: relative;
   cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
 }
 
 label[for=trigger] span {
@@ -58,4 +60,22 @@ input[id=trigger]:checked + label[for=trigger] span:nth-child(2) {
 input[id=trigger]:checked + label[for=trigger] span:nth-child(3) {
   top: 50%;
   transform: rotate(-45deg);
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: black;
+  position: fixed;
+  left: -250px;
+  transition: 0.3s;
+}
+
+input[id=trigger]:checked ~ .sidebar {
+  left: 0;
+}
+
+input[id=trigger]:checked + label[for=trigger] {
+  left: 260px;
 }
