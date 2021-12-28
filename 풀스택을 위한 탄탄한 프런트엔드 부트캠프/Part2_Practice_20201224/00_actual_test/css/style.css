@@ -334,3 +334,40 @@ footer {
         display: none;
     }
 }
+
+/* 자바스크립트 관련 */
+#backtotop {
+  background-color: rgb(47, 48, 89);
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  text-align: center;
+  line-height: 40px;
+
+  transition-property: background-color, opacity, visibility;
+  transition-duration: 0.3s, 0.5s, 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 999;
+}
+
+#backtotop::after {
+  content: '\f077';
+  font-family: FontAwesome;
+  font-size: 1.5rem;
+  color: white;
+}
+
+#backtotop.show {
+  background-color: rgb(47, 48, 89);
+  opacity: 1;
+  visibility: visible;
+}
+
+#backtotop.show:hover {
+  background-color: #177dbd;
+  cursor: pointer;
+}
