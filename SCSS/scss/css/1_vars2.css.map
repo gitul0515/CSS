@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAOA,AAAA,IAAI,CAAC;EACH,KAAK,EAPM,IAAI;EAUb,SAAI,EAPI,IAAI;EAQZ,WAAM,EATI,KAAK,EAAE,UAAU;EAY7B,WAAW,EAVC,IAA6B;CAW1C;;AAED,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,SAAS,EApBM,KAAK;CAqBrB",
+    "sources": [
+        "../1_vars2.scss"
+    ],
+    "names": [],
+    "file": "1_vars2.css"
+}
