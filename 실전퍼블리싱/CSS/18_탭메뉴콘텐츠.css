@@ -28,6 +28,8 @@ input[name=tab] {
 .content {
   position: absolute;
   opacity: 0;
+  visibility: hidden;
+  transition: 0.5s;
 }
 
 .button {
@@ -54,6 +56,7 @@ input[id=button1]:checked ~ .slide1,
 input[id=button2]:checked ~ .slide2, 
 input[id=button3]:checked ~ .slide3 {
   opacity: 1;
+  visibility: visible;
 }
 
 input[id=button1]:checked ~ .button label[for=button1], input[id=button2]:checked ~ .button label[for=button2], input[id=button3]:checked ~ .button label[for=button3] {
