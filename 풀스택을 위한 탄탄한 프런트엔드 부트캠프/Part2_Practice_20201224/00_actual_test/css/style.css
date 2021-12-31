@@ -180,6 +180,7 @@ section {
 .roadmap-container {
     width: 100%;
     margin: 1rem 0;
+    overflow: hidden;
 }
 
 .roadmap-title-container {
@@ -217,7 +218,7 @@ section {
 
 .class-list {
     display: flex;
-    overflow: hidden;
+    overflow: visible;
     flex-shrink: unset;
 
     /* li 스타일 초기화 */

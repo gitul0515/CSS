@@ -1,0 +1,64 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tab-inner {
+  width: 300px;
+  height: 350px;
+  position: relative;
+}
+
+input[name=button] {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+input[id=button1]:checked ~ .btn label[for=button1],
+input[id=button2]:checked ~ .btn label[for=button2],
+input[id=button3]:checked ~ .btn label[for=button3] {
+  background-color: crimson;
+}
+
+input[id=button1]:checked ~ .slide1, 
+input[id=button2]:checked ~ .slide2, 
+input[id=button3]:checked ~ .slide3 {
+  visibility: visible;
+  opacity: 1;
+}
