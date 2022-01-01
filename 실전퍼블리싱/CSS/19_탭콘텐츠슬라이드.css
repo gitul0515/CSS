@@ -1,0 +1,73 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tab-container {
+  width: 300px;
+  height: 350px;
+}
+
+input[name=tab] {
+  display: none;
+}
+
+.slide {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.slide-inner {
+  position: absolute;
+  left: 0;
+  width: 900px;
+  font-size: 0;
+  transition: 0.5s;
+}
+
+.btn {
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+}
+
+.btn label {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+}
+
+input[id=tab1]:checked ~ .slide .slide-inner {
+  left: 0;
+}
+input[id=tab2]:checked ~ .slide .slide-inner {
+  left: -300px;
+}input[id=tab3]:checked ~ .slide .slide-inner {
+  left: -600px;
+}
+
+input[id=tab1]:checked ~ .btn label[for=tab1] {
+  background-color: crimson;
+}
+input[id=tab2]:checked ~ .btn label[for=tab2] {
+  background-color: crimson;
+}
+input[id=tab3]:checked ~ .btn label[for=tab3] {
+  background-color: crimson;
+}
