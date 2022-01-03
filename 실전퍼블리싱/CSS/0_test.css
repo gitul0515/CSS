@@ -1,41 +1,82 @@
-/* Google Web Font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+/* Google Web Fonts CDN */
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
 
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: #222;
   line-height: 1.5em;
   margin: 0;
-  font-weight: 300;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
 }
 
 a {
+  color: #222;
   text-decoration: none;
 }
 
-.box {
+.dropdown-container {
+  display: flex;
+  top: 30%;
+  position: relative;
+}
+
+.dropdown {
+  width: 180px;
+  margin: 3px;
+  position: relative;
+}
+
+.dropdown-btn {
+  font-size: 1.1rem;
+  width: inherit;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(94, 205, 50);
+  color: hsl(0, 0%, 100%);
+}
+.dropdown-submenu {
+  display: none;
   position: absolute;
-  width: 100px;
-  height: 100px;
-  background-color: yellow;
 }
 
-.box:nth-child(1) {
-  border: 3px solid red;
+.dropdown-submenu a {
+  display: inline-block;
+  width: 80px;
+  padding: 5px;
+  text-align: center;
+  font-size: 0.9rem;
 }
 
-.box:nth-child(2) {
-  border: 3px solid blue;
-  transform: translateX(-100px);
+.dropdown-submenu a:hover {
+  background-color: rgb(226, 225, 224);
 }
 
-.box:nth-child(2) {
-  transform: translateX(-200px);
+
+.dropdown:nth-child(1):hover .dropdown-submenu, 
+.dropdown:nth-child(2):hover .dropdown-submenu {
+  display: flex;
+  width: 740px;
 }
 
-.box:nth-child(2) {
-  transform: translateX(-300px);
+.dropdown:nth-child(3):hover .dropdown-submenu, 
+.dropdown:nth-child(4):hover .dropdown-submenu {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 740px;
+}
+
+.dropdown:nth-child(3) .dropdown-submenu {
+  transform: translateX(-560px);
+}
+
+.dropdown:nth-child(3) .dropdown-submenu a {
+  float: right;
+}
+
+.dropdown:nth-child(4) .dropdown-submenu {
+  transform: translateX(-560px);
 }
