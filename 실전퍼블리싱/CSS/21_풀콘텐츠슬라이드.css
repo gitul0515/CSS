@@ -1,0 +1,93 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.5em;
+  height: 100vh;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tab-container {
+  height: 100vh;
+  position: relative;
+}
+
+input[name=tab] {
+  display: none;
+}
+
+.contents-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.contents-inner {
+  position: absolute;
+  width: 300%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+.contents-inner div {
+  float: left;
+  width: 33.33333%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents-inner div:nth-child(1) {
+  background-color: rgb(255, 144, 104);
+}
+.contents-inner div:nth-child(2) {
+  background-color: cornflowerblue;
+}
+.contents-inner div:nth-child(3) {
+  background-color: cyan;
+}
+
+.contents-inner div h1 {
+  font-size: 3rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.btn label {
+  display: inline-block;
+  width: 60px;
+  height: 5px;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[id=tab1]:checked ~ .contents-container .contents-inner {
+  left: 0;
+}
+input[id=tab2]:checked ~ .contents-container .contents-inner {
+  left: -100%;
+}
+input[id=tab3]:checked ~ .contents-container .contents-inner {
+  left: -200%;
+}
+
+input[id=tab1]:checked ~.btn label[for=tab1], 
+input[id=tab2]:checked ~.btn label[for=tab2], 
+input[id=tab3]:checked ~.btn label[for=tab3] {
+  background-color: black;
+}
