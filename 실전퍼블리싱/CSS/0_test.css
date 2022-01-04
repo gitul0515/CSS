@@ -24,6 +24,7 @@ a {
 }
 
 .dropdown {
+  border: 1px solid red;
   width: 180px;
   margin: 3px;
   position: relative;
@@ -54,7 +55,6 @@ a {
 .dropdown-submenu a:hover {
   background-color: rgb(226, 225, 224);
 }
-
 
 .dropdown:nth-child(1):hover .dropdown-submenu, 
 .dropdown:nth-child(2):hover .dropdown-submenu {

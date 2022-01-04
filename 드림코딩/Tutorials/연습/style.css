@@ -1,0 +1,110 @@
+body {
+  color: #222;
+  background-color: rgba(220, 220, 220, 0.726);
+}
+
+a {
+  all: unset;
+}
+a:link, a:visited, a:active, a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+.head-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(34, 34, 34, 0.726);
+  position: relative;
+}
+
+a.logo {
+  width: 300px;
+  height: 60px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  line-height: 60px;
+}
+
+a.logo p {
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0; 
+  /* p 요소에는 위 아래로 마진이 붙는다 */
+}
+
+.logo i {
+  color: orange;
+  margin-right: 10px;
+  font-size: 1.3rem;
+}
+
+.logo p {
+  font-size: 1.3rem;
+}
+
+.menu {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+}
+
+.menu a {
+  line-height: 60px;
+  height: 60px;
+  padding: 0 30px;
+  display: inline-block;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.menu a:hover {
+  background-color: orange;
+}
+
+.sns {
+  width: 100px;
+  height: 60px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sns i {
+  margin: 6px;
+  cursor: pointer;
+}
+
+.small-menu {
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 880px){
+  .head-container {
+    display: block;
+    height: 300px;
+  }
+  .menu a {
+    display: block;
+    height: 40px;
+    line-height: 40px;
+  }
+  .sns {
+    width: 100%;
+  }
+  .small-menu {
+    display: block;
+  }
+}
