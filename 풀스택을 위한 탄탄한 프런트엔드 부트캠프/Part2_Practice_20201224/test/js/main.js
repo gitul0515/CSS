@@ -1,20 +1,20 @@
 // ----- backToTop 버튼 -----
 const backToTop = document.getElementById('backtotop');
 
-function scrollCheck() {
-  if (scrollY !== 0) {
+window.addEventListener('scroll', buttonShow);
+backToTop.addEventListener('click', scrollUp);
+
+function buttonShow() {
+  if(scrollY !== 0) {
     backToTop.classList.add('show');
   } else {
     backToTop.classList.remove('show');
   }
 }
 
-function moveBackToTop() {
-  scrollTo({top: 0, behavior:'smooth'});
+function scrollUp () {
+  scrollTo({ top:0, behavior:'smooth' });
 }
-
-window.addEventListener('scroll', scrollCheck);
-backToTop.addEventListener('click', moveBackToTop);
 
 // ----- 버튼으로 ul 콘텐츠를 움직이기 -----
 const preArrow = [...document.querySelectorAll('.slide-prev')];
