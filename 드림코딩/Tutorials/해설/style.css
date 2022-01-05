@@ -1,3 +1,10 @@
+/* 사용자 지정 css 속성 */
+:root {
+  --nav-bg-color: rgb(40, 78, 150);
+  --nav-text-color: #f0f4f5;
+  --nav-accent-color: rgb(243, 158, 0);
+}
+
 body {
   margin: 0;
 }
@@ -17,7 +24,7 @@ ul {
 .nav__container {
   display: flex;
   justify-content: space-between;
-  background-color: rgb(40, 78, 150);
+  background-color: var(--nav-bg-color);
   padding: 20px 20px;
   position: relative;
 }
@@ -28,13 +35,13 @@ ul {
 }
 
 .nav__logo i {
-  color: orange;
+  color: var(--nav-accent-color);
   font-size: 1.4rem;
   margin-right: 8px;
 }
 
 .nav__logo a {
-  color: aliceblue;
+  color: var(--nav-text-color);
   font-size: 1.2rem;
 }
 
@@ -48,12 +55,12 @@ ul {
 
 .nav__menu li a {
   padding: 21px 28px;
-  color: aliceblue;
+  color: var(--nav-text-color);
   font-size: 1.1rem;
   vertical-align: middle;
 }
 .nav__menu li a:hover {
-  background-color: orange;
+  background-color: var(--nav-accent-color);
   border-radius: 4px;
 }
 
@@ -65,7 +72,7 @@ ul {
 
 .nav__sns i {
   font-size: 1.2rem;
-  color: aliceblue; 
+  color: var(--nav-text-color); 
 }
 .nav__sns li:nth-child(1) i {
   margin-right: 14px;
@@ -76,7 +83,7 @@ ul {
   top: 20px;
   right: 28px;
   font-size: 1.2rem;
-  color: orange;
+  color: var(--nav-accent-color);
   cursor: pointer;
   display: none;
 }
