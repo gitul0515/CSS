@@ -1,0 +1,12 @@
+a 태그 초기화:   text-decoration: none;
+                     color: #222;
+
+ul 태그 초기화: list-style: none;
+                margin: 0;
+                padding-left: 0;
+
+
+
+
+
+

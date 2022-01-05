@@ -1,53 +1,56 @@
 body {
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
 }
 
-/* 태그 스타일 초기화 */
+/* 태그 초기화 */
 a {
   text-decoration: none;
   color: #222;
 }
 ul {
   list-style: none;
-  padding-left: 0;
+  margin: 0;
+  padding: 0;
 }
 
+/* 헤더 영역 */
 .nav__container {
-  position: relative;
   display: flex;
   justify-content: space-between;
-  background-color: rgb(44, 52, 75);
-  padding: 2px 12px;
+  background-color: rgb(40, 78, 150);
+  padding: 20px 20px;
+  position: relative;
 }
 
 .nav__logo {
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
 .nav__logo i {
   color: orange;
-  margin: 0 8px;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
+  margin-right: 8px;
 }
+
 .nav__logo a {
-  color: white;
-  font-size: 1.3rem;
+  color: aliceblue;
+  font-size: 1.2rem;
 }
 
 .nav__menu {
   display: flex;
+  align-items: center;
 }
 
 .nav__menu li {
 }
 
 .nav__menu li a {
-  color: white;
-  padding: 8px 34px;
-  box-sizing: border-box;
+  padding: 21px 28px;
+  color: aliceblue;
+  font-size: 1.1rem;
+  vertical-align: middle;
 }
 .nav__menu li a:hover {
   background-color: orange;
@@ -56,60 +59,63 @@ ul {
 
 .nav__sns {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
-.nav__sns li a i {
-  color: white;
+.nav__sns i {
   font-size: 1.2rem;
-  margin: 0 8px;
+  color: aliceblue; 
+}
+.nav__sns li:nth-child(1) i {
+  margin-right: 14px;
 }
 
-.nav__toggle_btn {
+.nav__toggle__btn {
   position: absolute;
-  right: 16px;
-  top: 18px;
+  top: 20px;
+  right: 28px;
+  font-size: 1.2rem;
+  color: orange;
   cursor: pointer;
   display: none;
 }
 
-.nav__toggle_btn i {
-  font-size: 1.2rem;
-  color: orange;
-}
-
-@media screen and (max-width: 860px) {
+/* 미디어 쿼리 */
+@media screen and (max-width: 680px) {
   .nav__container {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .nav__logo {
-    padding-top: 10px;
+    padding-bottom: 16px;
   }
 
   .nav__menu {
+    display: none;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    margin-top: 8px;
   }
 
   .nav__menu li {
     width: 100%;
-    text-align: center;
   }
 
-  .nav__menu a {
-    width: 100%;
-    display: inline-block;
+  .nav__menu li a {
+    display: block;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 
   .nav__sns {
-    width: 100%;
+    display: none;
     justify-content: center;
-    margin-top: 0;
+    margin-top: 8px;
   }
 
-  .nav__toggle_btn {
+  .nav__toggle__btn {
     display: block;
+  }
+
+  .show {
+    display: flex;
   }
 }
