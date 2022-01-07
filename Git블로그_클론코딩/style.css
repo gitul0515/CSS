@@ -24,14 +24,14 @@ h1 {
   margin: 0;
 }
 img {
-  margin: 0;
+  padding: 0;
 }
 
 /* 헤더 영역 */
 header {
   color: #f2f4f0;
   height: 100%;
-  background: url(./9.png) no-repeat center center;
+  background: url(./Image/9.png) no-repeat center center;
   background-size: cover;
   position: relative;
 }
@@ -41,6 +41,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 26px 48px;
+  position: relative;
 }
 
 .nav__logo {
@@ -48,7 +49,9 @@ header {
 }
 
 .nav__menu {
+  position: relative;
   display: flex;
+  z-index: 1;
 }
 .nav__menu ul {
   display: flex;
@@ -72,6 +75,7 @@ header {
   display: flex;
   position: relative;
   cursor: pointer;
+  z-index: 1;
 }
 .nav__btn__lang i {
   font-size: 1.4rem;
@@ -124,4 +128,60 @@ header {
 
 .show {
   opacity: 1;
+}
+
+i.hamburger {
+  position: absolute;
+  font-size: 1.3rem;
+  right: 44px;
+  top: 28px;
+  cursor: pointer;
+  z-index: 1;
+  display: none;
+}
+
+/* 미디어 쿼리 */
+@media screen and (max-width: 800px) {
+  i.hamburger {
+    display: block;
+  }
+  .nav__menu {
+    display: none;
+    flex-direction: column;
+    background-color: #f2f4f0;
+    padding: 2px 10px;
+    position: absolute;
+    right: 20px;
+    top: 55px;
+  }
+  .nav__menu ul {
+    text-align: center;
+    flex-direction: column;
+  }
+  .nav__menu ul li {
+    width: 100%;
+    margin-right: 0;
+    margin-top: 3px;
+    text-align: left;
+  }
+  .nav__menu > ul a {
+    padding-top: 4px;
+    font-size: 0.9rem;
+    color:#222;
+  }
+  .nav__btn__lang {
+    background-color: #f2f4f0;
+    padding-left: 2px;
+    box-sizing: border-box;
+  }
+  .nav__btn__lang i {
+    color:#222;
+    box-sizing: border-box;
+  }
+  ul.btn__lang__flags li {
+    margin-top: 0;
+  }
+  .show {
+    display: flex;
+  }
 }
