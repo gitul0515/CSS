@@ -95,3 +95,49 @@ function moveRight(event) {
   // data-position 값을 갱신
   ul.setAttribute('data-position', String(position));
 }
+
+// ----- 드래그 & 드롭으로 ul 콘텐츠를 이동 -----
+// mousedown, mousemove, mouseup, dragend
+
+let moveStart;
+let curImg;
+let startXPos;
+let Ul;
+let UlPosition;
+
+const imgList = document.querySelectorAll('ul li img');
+for (let i = 0; i < imgList.length; i++) {
+  imgList[i].addEventListener('mousedown', imgMoveStart);
+}
+
+function imgMoveStart(event) {
+  event.preventDefault();
+
+  moveStart = true;
+  curImg = event.target;
+  startXPos = event.clientX;
+
+  Ul = curImg.parentNode.parentNode;
+  UlPosition = Ul.getAttribute('data-position');
+
+  curImg.addEventListener('mousemove', imgMoving)
+  curImg.addEventListener('mouseup', imgMoveEnd)
+}
+
+function imgMoving (event) {
+  event.preventDefault();
+  let curXpos = event.clientX;
+
+  let moveDistance = Number(UlPosition) + (Number(curXpos) - Number(startXPos));
+
+  Ul.style.transition = 'transform 0s';
+  Ul.style.transform = `translateX(${moveDistance}px)`;
+}
+
+window.addEventListener('mouseup', imgMoveEnd);
+window.addEventListener('dragend', imgMoveEnd);
+
+function imgMoveEnd (event) {
+
+}
+
