@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="./4_Form_1.css">
   </head>
   <body>
+    <h2>회원가입</h2>
     <form>
-      <input type="file" accept=".pdf, .png">
+      <label for="user-tel">전화번호</label>
+      <input id="user-tel" type="tel" placeholder="전화번호 (01*-****-****)" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}">
+
       <button>submit</button>
     </form>
   </body>
