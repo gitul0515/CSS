@@ -1,5 +1,11 @@
 /* Google Web Font */
-@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-jp.css);
+
+* {
+  box-sizing: border-box;
+  font-family: 'Spoqa Han Sans Neo', 'Spoqa Han Sans JP', sans-serif;
+}
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -10,6 +16,11 @@ body {
 
 a {
   text-decoration: none;
+}
+
+button {
+  border: 0;
+  outline: none;
 }
 
 /* 기본 골격 및 스타일 */
@@ -43,7 +54,9 @@ input[name=tab] {
   width: 25%;
   height: 100vh;
   position: relative;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .contents-inner section:nth-child(1) {
@@ -59,22 +72,12 @@ input[name=tab] {
   background-color: rgb(80, 255, 255);
 }
 
-.contents-inner section::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
 .contents-inner section h1 {
-  font-size: 4rem;
-  position: relative;
+  font-size: 3.5rem;
   text-align: center;
   opacity: 0;
-  transform: translateY(-100px);
   transition: 0.5s;
   transition-delay: 0.5s;
-  margin: 40px;
 }
 
 .btn {
@@ -91,7 +94,7 @@ input[name=tab] {
   cursor: pointer;
   transition: 0.3s;
   margin: 6px 12px;
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 input[id=tab1]:checked ~ .contents-container .contents-inner {
@@ -125,7 +128,97 @@ input[id=tab2]:checked ~ .contents-container .contents-inner section:nth-child(2
 input[id=tab3]:checked ~ .contents-container .contents-inner section:nth-child(3) h1,
 input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4) h1 {
   opacity: 1;
-  transform: translateY(20px);
+  transform: translateY(10px);
 }
 
 /* 프로젝트 영역 */
+.projects__categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.projects__category {
+  color: black;
+  border: 1px solid lightgrey;
+  padding: 5px;
+  border-radius: 3px;
+  flex-basis: 12%;
+  cursor: pointer;
+  font-size: 1.05rem;
+}
+
+.projects__container {
+  width: 80%;
+  margin: 30px auto 80px auto;
+  position: relative;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.project {
+  position: relative;
+  flex-basis: 24%;
+  padding: 20px;
+  background-color: rgba(222, 224, 230, 0.384);
+  margin: 3px;
+  height: 180px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.project img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.project__description {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.81);
+  color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  opacity: 0;
+  transition: 1s ease;
+  text-align: center;
+}
+
+.project:hover .project__description {
+  opacity: 1;
+}
+
+.project__description h3 {
+  font-size: 1.2rem;
+  color: rgba(255, 226, 60, 0.986);
+  margin: 0;
+  transform: translateY(6px);
+  font-weight: normal;
+}
+
+.project__description p {
+  margin: 0;
+  transform: translateY(20px);
+}
+
+.project__line {
+  width: 52%;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(211, 211, 211, 0.884);
+}
