@@ -12,6 +12,7 @@ a {
   text-decoration: none;
 }
 
+/* 기본 골격 및 스타일 */
 .tab-container {
   height: 100vh;
   position: relative;
@@ -30,51 +31,42 @@ input[name=tab] {
 
 .contents-inner {
   position: absolute;
-  width: 300%;
+  width: 400%;
   height: 100vh;
   top: 0;
   left: 0;
   transition: 0.5s;
 }
 
-.contents-inner div {
+.contents-inner section {
   float: left;
-  width: 33.33333%;
+  width: 25%;
   height: 100vh;
   position: relative;
+  text-align: center;
 }
 
-.contents-inner div:nth-child(1) {
-  background: url(../Image/22_photo-01.jpg) no-repeat center center fixed;
-  background-size: cover;
+.contents-inner section:nth-child(1) {
+  background-color: rgb(252, 163, 130);
 }
-.contents-inner div:nth-child(2) {
-  background: url(../Image/22_photo-02.jpg) no-repeat center center fixed;
-  background-size: cover;
+.contents-inner section:nth-child(2) {
+  background-color: rgb(255, 218, 56);
 }
-.contents-inner div:nth-child(3) {
-  background: url(../Image/22_photo-03.jpg) no-repeat center center fixed;
-  background-size: cover;
+.contents-inner section:nth-child(3) {
+  background-color: rgb(125, 168, 248);
+}
+.contents-inner section:nth-child(4) {
+  background-color: rgb(80, 255, 255);
 }
 
-.contents-inner div::before {
+.contents-inner section::after {
   content: '';
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.contents-inner div:nth-child(1)::before {
-  background: linear-gradient(135deg, gold, transparent);
-}
-.contents-inner div:nth-child(2)::before {
-  background: linear-gradient(135deg, crimson, transparent);
-}
-.contents-inner div:nth-child(3)::before {
-  background: linear-gradient(135deg, royalblue, transparent);
-}
-
-.contents-inner div h1 {
+.contents-inner section h1 {
   font-size: 4rem;
   position: relative;
   text-align: center;
@@ -82,6 +74,7 @@ input[name=tab] {
   transform: translateY(-100px);
   transition: 0.5s;
   transition-delay: 0.5s;
+  margin: 40px;
 }
 
 .btn {
@@ -97,7 +90,8 @@ input[name=tab] {
   color: white;
   cursor: pointer;
   transition: 0.3s;
-  margin: 4px;
+  margin: 6px 12px;
+  font-size: 1.05rem;
 }
 
 input[id=tab1]:checked ~ .contents-container .contents-inner {
@@ -109,16 +103,29 @@ input[id=tab2]:checked ~ .contents-container .contents-inner {
 input[id=tab3]:checked ~ .contents-container .contents-inner {
   left: -200%;
 }
+input[id=tab4]:checked ~ .contents-container .contents-inner {
+  left: -300%;
+}
+
+input[id=tab1]:hover ~.btn label[for=tab1], 
+input[id=tab2]:hover ~.btn label[for=tab2], 
+input[id=tab3]:hover ~.btn label[for=tab3], 
+input[id=tab4]:hover ~.btn label[for=tab4] {
+  color: gold;
+}
 
 input[id=tab1]:checked ~.btn label[for=tab1], 
 input[id=tab2]:checked ~.btn label[for=tab2], 
-input[id=tab3]:checked ~.btn label[for=tab3] {
-  color: crimson;
+input[id=tab3]:checked ~.btn label[for=tab3], input[id=tab4]:checked ~.btn label[for=tab4] {
+  color: gold;
 }
 
-input[id=tab1]:checked ~ .contents-container .contents-inner div:nth-child(1) h1, 
-input[id=tab2]:checked ~ .contents-container .contents-inner div:nth-child(2) h1, 
-input[id=tab3]:checked ~ .contents-container .contents-inner div:nth-child(3) h1 {
+input[id=tab1]:checked ~ .contents-container .contents-inner section:nth-child(1) h1, 
+input[id=tab2]:checked ~ .contents-container .contents-inner section:nth-child(2) h1, 
+input[id=tab3]:checked ~ .contents-container .contents-inner section:nth-child(3) h1,
+input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4) h1 {
   opacity: 1;
-  transform: translateY(100px);
+  transform: translateY(20px);
 }
+
+/* 프로젝트 영역 */
