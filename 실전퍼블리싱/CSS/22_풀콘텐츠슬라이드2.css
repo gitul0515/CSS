@@ -141,17 +141,45 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
 
 .projects__category {
   color: black;
-  border: 1px solid lightgrey;
-  padding: 5px;
+  padding: 6px;
   border-radius: 3px;
   flex-basis: 12%;
   cursor: pointer;
   font-size: 1.05rem;
+  position: relative;
+  transition: 0.3s;
+}
+
+.projects__category.checked, 
+.projects__category:hover {
+  background-color: rgb(74, 125, 219);
+  color: #f2f2f2;
+}
+
+.projects__cnt {
+  display: inline-block;
+  background-color: rgb(21, 78, 184);
+  color: #f2f2f2;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  margin-left: 5px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transition: 0.3s;
+  transform: translateY(-5px);
+}
+
+.projects__category.checked .projects__cnt, 
+.projects__category:hover .projects__cnt {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .projects__container {
   width: 80%;
-  margin: 30px auto 80px auto;
+  margin: 25px auto 80px auto;
   position: relative;
   /* border: 1px solid red; */
   display: flex;
@@ -165,7 +193,7 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   flex-basis: 24%;
   padding: 20px;
   background-color: rgba(222, 224, 230, 0.384);
-  margin: 3px;
+  margin: 5px;
   height: 180px;
   border-radius: 5px;
   display: flex;
@@ -192,12 +220,14 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   justify-content: center;
   padding: 5px;
   opacity: 0;
-  transition: 1s ease;
+  transform: translateY(10px);
+  transition: 0.6s ease;
   text-align: center;
 }
 
 .project:hover .project__description {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .project__description h3 {
