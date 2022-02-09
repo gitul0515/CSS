@@ -78,7 +78,7 @@ input[name=tab] {
 
 .btn {
   background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -183,6 +183,7 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   align-items: center;
   flex-wrap: wrap;
   transition: 0.2s ease-out;
+  /* border: 1px solid red; */
 }
 
 .projects__container.hidden {
@@ -195,8 +196,8 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   padding: 20px;
   background-color: rgba(222, 224, 230, 0.384);
   margin: 5px;
-  width: 300px;
-  height: 300px;
+  width: 270px;
+  height: 270px;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -260,7 +261,7 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
 }
 
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 750px) {
   .contents-container {
     /* height: 50vh; */
   }
