@@ -2,6 +2,7 @@
 <html lang="ko">
   <head>
       <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
       <title>21. 풀스크린 탭 콘텐츠 슬라이드</title>
       <link rel="stylesheet" href="../CSS/22_풀콘텐츠슬라이드2.css">
       <script src="../JS/22_main.js" defer></script>
@@ -26,26 +27,26 @@
             <h1>Projects</h1>
 
             <div class="projects__categories">
-              <button class="projects__category checked">
+              <button class="projects__category checked" data-filter="all">
                 All
                 <span class="projects__cnt">5</span>
               </button>
-              <button class="projects__category">
+              <button class="projects__category" data-filter="main">
                 Main
                 <span class="projects__cnt">5</span>
               </button>
-              <button class="projects__category">
-                Side
+              <button class="projects__category" data-filter="sub"> 
+                Sub
                 <span class="projects__cnt">5</span>
               </button>
-              <button class="projects__category">
-                Etc
+              <button class="projects__category" data-filter="etc">
+                Etc.
                 <span class="projects__cnt">5</span>
               </button>
             </div>
 
             <div class="projects__container">
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="main">
                 <img src="../Image/projects/project1.png" alt="프로젝트 이미지1">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -55,7 +56,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="main">
                 <img src="../Image/projects/project2.png" alt="프로젝트 이미지2">
                 <div class="project__description">
                   <h3>쇼핑리스트 앱</h3>
@@ -64,7 +65,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="main">
                 <img src="../Image/projects/project3.png" alt="프로젝트 이미지3">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -72,7 +73,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="sub">
                 <img src="../Image/projects/project4.png" alt="프로젝트 이미지4">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -80,7 +81,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="sub">
                 <img src="../Image/projects/project5.png" alt="프로젝트 이미지5">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -88,7 +89,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="sub">
                 <img src="../Image/projects/project6.png" alt="프로젝트 이미지6">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -96,7 +97,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="etc">
                 <img src="../Image/projects/project7.png" alt="프로젝트 이미지7">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
@@ -104,7 +105,7 @@
                   <div class="project__line"></div>
                 </div>
               </a>
-              <a class="project" href="#">
+              <a class="project" href="#" data-filter="etc">
                 <img src="../Image/projects/project8.png" alt="프로젝트 이미지8">
                 <div class="project__description">
                   <h3>아이헤이트 버그</h3>
