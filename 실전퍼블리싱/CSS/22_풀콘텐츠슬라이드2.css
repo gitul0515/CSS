@@ -184,7 +184,7 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   flex-wrap: wrap;
 }
 
-.project {
+.project.show {
   position: relative;
   flex-basis: 24%;
   padding: 20px;
@@ -195,6 +195,10 @@ input[id=tab4]:checked ~ .contents-container .contents-inner section:nth-child(4
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.project {
+  display: none;
 }
 
 .project img {
