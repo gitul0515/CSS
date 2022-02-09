@@ -1,7 +1,7 @@
 const categoryBtns = document.querySelector('.projects__categories');
 let curBtn = categoryBtns.firstElementChild;
-const projects = [...document.querySelector('.projects__container').children];
-console.log(projects);
+const projectContainer = document.querySelector('.projects__container');
+const projects = [...projectContainer.children];
 
 categoryBtns.addEventListener('click', e => {
   const target = e.target;
@@ -20,4 +20,9 @@ categoryBtns.addEventListener('click', e => {
       project.classList.remove('show');
     }
   });
+  
+  projectContainer.classList.add('hidden');
+  setTimeout(() => {
+    projectContainer.classList.remove('hidden');
+  }, 200);
 })
