@@ -36,6 +36,7 @@ input[name=tab] {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  background-color: rgb(125, 168, 248);
 }
 
 .contents-inner {
@@ -50,9 +51,10 @@ input[name=tab] {
   position: relative;
   float: left;
   width: 25%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+}
+
+#about, #skills, #contact {
+  height: 100vh;
 }
 
 .contents-inner section:nth-child(1) {

@@ -96,48 +96,45 @@ function moveRight(event) {
   ul.setAttribute('data-position', String(position));
 }
 
-// ----- 드래그 & 드롭으로 ul 콘텐츠를 이동 -----
-// mousedown, mousemove, mouseup, dragend
-
+// ----- 드래그 앤 드롭 -----
+window.addEventListener('mouseup', moveImgEnd);
+window.addEventListener('dragend', moveImgEnd);
 let moveStart;
 let curImg;
-let startXPos;
+let startPosX;
 let Ul;
 let UlPosition;
 
-const imgList = document.querySelectorAll('ul li img');
-for (let i = 0; i < imgList.length; i++) {
-  imgList[i].addEventListener('mousedown', imgMoveStart);
+const imgs = [...document.querySelectorAll('ul li img')];
+for (let i = 0; i < imgs.length; i++) {
+  imgs[i].addEventListener('mousedown', moveImgStart);
 }
 
-function imgMoveStart(event) {
-  event.preventDefault();
+function moveImgStart(e) {
+  e.preventDefault();
 
   moveStart = true;
-  curImg = event.target;
-  startXPos = event.clientX;
+  curImg = e.target;
+  startPosX = e.clientX;
 
   Ul = curImg.parentNode.parentNode;
   UlPosition = Ul.getAttribute('data-position');
 
-  curImg.addEventListener('mousemove', imgMoving)
-  curImg.addEventListener('mouseup', imgMoveEnd)
+  curImg.addEventListener('mousemove', moveImgDoing)
+  curImg.addEventListener('mouseup', moveImgEnd)
 }
 
-function imgMoving (event) {
-  event.preventDefault();
-  let curXpos = event.clientX;
+function moveImgDoing (e) {
+  e.preventDefault();
+  const offsetX = Number(e.clientX) - Number(startPosX);
 
-  let moveDistance = Number(UlPosition) + (Number(curXpos) - Number(startXPos));
-
+  Ul.style.transform = `translateX(${Number(UlPosition) + offsetX}px)`;
   Ul.style.transition = 'transform 0s';
-  Ul.style.transform = `translateX(${moveDistance}px)`;
 }
 
-window.addEventListener('mouseup', imgMoveEnd);
-window.addEventListener('dragend', imgMoveEnd);
-
-function imgMoveEnd (event) {
-
+function moveImgEnd () {
+  curImg.removeEventListener('mousemove', moveImgDoing);
+  Ul.style.transform = `translateX(0px)`;
+  Ul.style.transition = 'transform 1s';
 }
 
