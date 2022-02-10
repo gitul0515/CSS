@@ -21,13 +21,19 @@ const prevArrows = [...document.querySelectorAll('.slide-prev')];
 
 for (let i = 0; i < prevArrows.length; i++) {
   const ul = prevArrows[i].parentNode.parentNode.nextElementSibling;
-  const lis = ul.children; 
+  const lis = ul.children;
+  const nextArrow = prevArrows[i].nextElementSibling;
 
   // 현재 보여지는 ul 영역보다, 오른편에 콘텐츠가 더 있다면
   if (ul.clientWidth < lis.length * 260) {
     // 왼쪽 버튼 활성화
     prevArrows[i].addEventListener('click', moveLeft);
     prevArrows[i].classList.add('hover');
+
+    // 오른쪽 버튼 비활성화
+    nextArrow.style.color = '#cfd8dc';
+    nextArrow.removeEventListener('click', moveRight);
+    nextArrow.classList.remove('hover');
   } else {
     // 버튼을 모두 삭제한다
     const parent = prevArrows[i].parentNode;
@@ -97,8 +103,6 @@ function moveRight(event) {
 }
 
 // ----- 드래그 앤 드롭 -----
-window.addEventListener('mouseup', moveImgEnd);
-window.addEventListener('dragend', moveImgEnd);
 let moveStart;
 let curImg;
 let startPosX;
@@ -130,11 +134,25 @@ function moveImgDoing (e) {
 
   Ul.style.transform = `translateX(${Number(UlPosition) + offsetX}px)`;
   Ul.style.transition = 'transform 0s';
+  console.log(UlPosition);
 }
 
 function moveImgEnd () {
   curImg.removeEventListener('mousemove', moveImgDoing);
   Ul.style.transform = `translateX(0px)`;
   Ul.style.transition = 'transform 1s';
+
+  // 초기화
+  Ul.setAttribute('data-position', '0');
+
+  const prevArrow = Ul.previousElementSibling.lastElementChild.firstElementChild;
+  prevArrow.style.color = 'rgb(47, 48, 89)';
+  prevArrow.addEventListener('click', moveLeft);
+  prevArrow.classList.add('hover');
+
+  const nextArrow = prevArrow.nextElementSibling;
+  nextArrow.style.color = '#cfd8dc';
+  nextArrow.removeEventListener('click', moveRight);
+  nextArrow.classList.remove('hover');
 }
 
