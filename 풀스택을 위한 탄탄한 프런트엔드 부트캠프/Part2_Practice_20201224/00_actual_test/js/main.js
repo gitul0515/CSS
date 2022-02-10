@@ -134,10 +134,10 @@ function moveImgDoing (e) {
 
   Ul.style.transform = `translateX(${Number(UlPosition) + offsetX}px)`;
   Ul.style.transition = 'transform 0s';
-  console.log(UlPosition);
 }
 
 function moveImgEnd () {
+  moveStart = false;
   curImg.removeEventListener('mousemove', moveImgDoing);
   Ul.style.transform = `translateX(0px)`;
   Ul.style.transition = 'transform 1s';
@@ -156,3 +156,16 @@ function moveImgEnd () {
   nextArrow.classList.remove('hover');
 }
 
+document.addEventListener('mouseup', () => {
+  if (!moveStart) {
+    return;
+  }
+  moveImgEnd();
+});
+
+document.addEventListener('dragend', () => {
+  if (!moveStart) {
+    return;
+  }
+  moveImgEnd();
+});
