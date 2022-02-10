@@ -112,60 +112,62 @@ let UlPosition;
 const imgs = [...document.querySelectorAll('ul li img')];
 for (let i = 0; i < imgs.length; i++) {
   imgs[i].addEventListener('mousedown', moveImgStart);
+  imgs[i].addEventListener('touchstart', moveImgStart);
 }
 
 function moveImgStart(e) {
-  e.preventDefault();
+  e.cancelable && e.preventDefault();
 
   moveStart = true;
   curImg = e.target;
-  startPosX = e.clientX;
+  startPosX = e.clientX || e.touches[0].screenX;
 
   Ul = curImg.parentNode.parentNode;
   UlPosition = Ul.getAttribute('data-position');
 
   curImg.addEventListener('mousemove', moveImgDoing)
   curImg.addEventListener('mouseup', moveImgEnd)
+
+  curImg.addEventListener('touchmove', moveImgDoing)
+  curImg.addEventListener('touchend', moveImgEnd)
 }
 
 function moveImgDoing (e) {
-  e.preventDefault();
-  const offsetX = Number(e.clientX) - Number(startPosX);
+  e.cancelable && e.preventDefault();
+  const curPosX = e.clientX || e.touches[0].screenX;
+  const offsetX = Number(curPosX) - Number(startPosX);
 
   Ul.style.transform = `translateX(${Number(UlPosition) + offsetX}px)`;
   Ul.style.transition = 'transform 0s';
 }
 
-function moveImgEnd () {
-  moveStart = false;
-  curImg.removeEventListener('mousemove', moveImgDoing);
-  Ul.style.transform = `translateX(0px)`;
-  Ul.style.transition = 'transform 1s';
+function moveImgEnd (e) {
+  e.cancelable && e.preventDefault();
 
-  // 초기화
-  Ul.setAttribute('data-position', '0');
-
-  const prevArrow = Ul.previousElementSibling.lastElementChild.firstElementChild;
-  prevArrow.style.color = 'rgb(47, 48, 89)';
-  prevArrow.addEventListener('click', moveLeft);
-  prevArrow.classList.add('hover');
-
-  const nextArrow = prevArrow.nextElementSibling;
-  nextArrow.style.color = '#cfd8dc';
-  nextArrow.removeEventListener('click', moveRight);
-  nextArrow.classList.remove('hover');
+  if (moveStart) {
+    curImg.removeEventListener('mousemove', moveImgDoing);
+    curImg.removeEventListener('mouseup', moveImgEnd);
+    curImg.removeEventListener('touchmove', moveImgDoing);
+    curImg.removeEventListener('touchend', moveImgEnd);
+    Ul.style.transform = `translateX(0px)`;
+    Ul.style.transition = 'transform 1s ease';
+    moveStart = false;
+  
+    // 초기화
+    Ul.setAttribute('data-position', '0');
+    if (Ul.childElementCount < 5) return;
+  
+    const prevArrow = Ul.previousElementSibling.lastElementChild.firstElementChild;
+    prevArrow.style.color = 'rgb(47, 48, 89)';
+    prevArrow.addEventListener('click', moveLeft);
+    prevArrow.classList.add('hover');
+  
+    const nextArrow = prevArrow.nextElementSibling;
+    nextArrow.style.color = '#cfd8dc';
+    nextArrow.removeEventListener('click', moveRight);
+    nextArrow.classList.remove('hover');
+  }
 }
 
-document.addEventListener('mouseup', () => {
-  if (!moveStart) {
-    return;
-  }
-  moveImgEnd();
-});
-
-document.addEventListener('dragend', () => {
-  if (!moveStart) {
-    return;
-  }
-  moveImgEnd();
-});
+document.addEventListener('mouseup', moveImgEnd);
+document.addEventListener('dragend', moveImgEnd);
