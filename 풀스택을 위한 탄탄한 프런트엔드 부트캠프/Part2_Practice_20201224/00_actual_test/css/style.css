@@ -96,8 +96,9 @@ section {
 }
 
 .title-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  max-height: 100%;
 }
 
 .title {
@@ -353,23 +354,6 @@ footer {
     margin: 1rem 0.5rem;
 }
 
-/* 미디어 쿼리 설정 */
-@media only screen and (min-width: 1200px) {
-    .inner {
-        max-width: 1200px;
-    }
-}
-
-@media only screen and (max-width: 980px) {
-    .skill-container {
-        display: none;
-    }
-    .roadmap-title-dsc {
-        display: none;
-    }
-}
-
-/* 자바스크립트 관련 */
 #backtotop {
   background-color: rgb(47, 48, 89);
   position: fixed;
@@ -404,3 +388,57 @@ footer {
   background-color: #177dbd;
   cursor: pointer;
 }
+
+/* 미디어 쿼리 설정 */
+@media only screen and (min-width: 1200px) {
+    .inner {
+        max-width: 1200px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .skill-container {
+        display: none;
+    }
+    .roadmap-title-dsc {
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px) {
+  .main {
+    height: 330px;
+  }
+
+  .inner {
+    padding: 0 1.4rem;
+  }
+
+  .class-skill {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .message {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+
+  .roadmap-container {
+    margin-top: 1.6rem;
+    margin-bottom: 0;
+  }
+
+  .class-card {
+    height: 270px;
+  }
+
+  .class-container {
+    padding: 0 16px;
+  }
+}
+
