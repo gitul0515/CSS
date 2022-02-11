@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #E5E5E5;;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tab {
+  width: 540px;
+  background-color: #fff;
+  border-bottom: 1px solid #E5EAEF;
+}
+
+.tab::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+.tab__tab-item {
+  float: left;
+  margin-right: 16px;
+}
+
+.tab__tab-item:last-child {
+  margin-right: 0;
+}
+
+.tab__tab-item a {
+  color: #8492A6;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.02em;
+  text-align: left;
+  display: inline-block;
+  padding: 16px 20px;
+}
+
+.tab__tab-item.selected a {
+  font-weight: 500;
+  color: #2860E1;
+  border-bottom: 2px solid #2860E1;
+}
