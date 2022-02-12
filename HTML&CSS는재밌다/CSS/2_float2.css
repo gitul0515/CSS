@@ -1,0 +1,63 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgrey;
+  font-family: 'Spoqa Han Sans Neo', sans-serif;
+  letter-spacing: -0.02em;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.card::after {
+  content: '';
+  display: block;
+  clear: left;
+}
+
+.card__user {
+  float: left;
+  height: 44px;
+  width: 44px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.card__content {
+  float: left;
+}
+
+.card__title {
+  font-family: "Noto Sans KR";
+  margin-bottom: 4px;
+  color: #1F2D3D;
+}
+
+.card__sender {
+  color: #AFB3B9;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.card__text {
+  line-height: 24px;
+  color: #79818B;
+}
