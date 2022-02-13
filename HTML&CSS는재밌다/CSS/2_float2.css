@@ -11,9 +11,6 @@ p {
 
 body {
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: lightgrey;
   font-family: 'Spoqa Han Sans Neo', sans-serif;
   letter-spacing: -0.02em;
@@ -24,12 +21,13 @@ body {
 .card {
   background-color: #ffffff;
   padding: 20px;
+  max-width: 531px;
 }
 
-.card::after {
+.clearfix::after {
   content: '';
   display: block;
-  clear: left;
+  clear: both;
 }
 
 .card__user {
@@ -44,20 +42,23 @@ body {
   float: left;
 }
 
-.card__title {
-  font-family: "Noto Sans KR";
-  margin-bottom: 4px;
+.card__content h1 {
   color: #1F2D3D;
+  font-family: "Noto Sans KR";
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: 4px;
 }
 
-.card__sender {
+.card__content span {
   color: #AFB3B9;
   font-size: 14px;
   display: block;
   margin-bottom: 12px;
 }
 
-.card__text {
+.card__content p {
   line-height: 24px;
   color: #79818B;
 }
