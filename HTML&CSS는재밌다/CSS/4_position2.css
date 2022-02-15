@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+body {
+  font-family: 'Noto Sans KR';
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+}
+
+.card {
+  width: 400px;
+}
+
+.card > img {
+  width: 100%;
+}
+
+.card__title {
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 32px;
+}
+
+.card__agency {
+  line-height: 24px;
+  color: #7D858F;
+}
+
+.card__price {
+  text-align: right;
+  color: #273444;
+}
+
+.card__price > span {
+  font-size: 22px;
+  font-weight: 700;
+  color: #2860E1;
+}

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-p {
+h1 {
   margin: 0;
 }
 
@@ -32,6 +32,7 @@ body {
 }
 
 .card__user-img {
+  display: inline-block;
   width: 100%;
   height: 100%;
   border-radius: 50%;
@@ -53,6 +54,7 @@ body {
   color: #273444;
   font-family: Lato;
   font-size: 16px;
+  font-weight: normal;
   line-height: 24px;
   letter-spacing: 0em;
   position: absolute;
