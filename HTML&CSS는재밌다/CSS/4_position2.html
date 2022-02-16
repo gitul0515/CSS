@@ -9,16 +9,20 @@
   </head>
   <body>
     <article class="card">
-      <img src="../assets/position/2_img-card.jpg" alt="카드 이미지">
-      <h1 class="card__title">그랜드캐년+앤텔롭+홀슈밴드 자유일정</h1>
-      <p class="card__agency">김버그트래블</p>
-      <p class="card__price">1인 <span>180,000원</span></p>
-      <button class="card__button card__button--forward">
-        <img src="../assets/position/2_icon-forward.svg" alt="Forward 아이콘">
-      </button>
-      <button class="card__button card__button--backward">
-        <img src="../assets/position/2_icon-backward.svg" alt="Back 아이콘">
-      </button>
+      <div class="card__img">
+        <img src="../assets/position/2_img-card.jpg" alt="카드 이미지">
+        <button class="card__button card__button--forward" aria-label="forward">
+          <img src="../assets/position/2_icon-forward.svg" alt="Forward 아이콘">
+        </button>
+        <button class="card__button card__button--backward" aria-label="backward">
+          <img src="../assets/position/2_icon-backward.svg" alt="Back 아이콘">
+        </button>
+      </div>
+      <div class="card__infor">
+        <h1 class="card__title">그랜드캐년+앤텔롭+홀슈밴드 자유일정</h1>
+        <span class="card__agency">김버그트래블</span>
+        <p class="card__price">1인 <span>180,000원</span></p>
+      </div>
     </article>
   </body>
 </html>

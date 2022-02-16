@@ -23,14 +23,42 @@ body {
   font-size: 16px;
   letter-spacing: -0.01em;
   line-height: 24px;
+  background-color: beige;
 }
 
 .card {
   width: 400px;
+  background-color: #ffffff;
 }
 
-.card > img {
+.card__img {
+  position: relative;
+}
+
+.card__img > img {
+  display: block;
   width: 100%;
+  height: auto;
+}
+
+.card__button {
+  position: absolute;
+  top: 50%;
+  color: #ffffff;
+}
+
+.card__button--forward {
+  right: 0;
+  transform: translateY(-50%);
+}
+
+.card__button--backward {
+  left: 0;
+  transform: translateY(-50%);
+} 
+
+.card__infor {
+  padding: 12px 16px;
 }
 
 .card__title {
@@ -38,11 +66,15 @@ body {
   font-weight: 500;
   font-style: normal;
   line-height: 32px;
+  color: #1F2D3D;
+  margin-bottom: 2px;
 }
 
 .card__agency {
   line-height: 24px;
   color: #7D858F;
+  display: inline-block;
+  margin-bottom: 8px;
 }
 
 .card__price {
@@ -55,3 +87,4 @@ body {
   font-weight: 700;
   color: #2860E1;
 }
+
