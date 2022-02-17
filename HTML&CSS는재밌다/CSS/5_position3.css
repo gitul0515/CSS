@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgrey;
+  height: 100vh;
+  font-family: 'Nunito Sans', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0em;
+}
+
+h1 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+.modal {
+  background-color: #ffffff;
+  padding: 32px 40px;
+  border-radius: 4px;
+  position: relative;
+  text-align: center;
+}
+
+.modal__close-btn {
+  position: absolute;
+  width: 11.67px;
+  height: 11.67px;
+  top: 12.17px;
+  right: 12.17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__close-btn img {
+  width: inherit;
+  height: inherit;
+}
+
+.modal__title h1 {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  color: #1F2D3D;
+  margin-bottom: 4px;
+}
+
+.modal__title p {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0em;
+  color: #273444;
+  margin-bottom: 24px;
+}
+
+.modal__form > input {
+  color: #8492A6;
+  background-color: #F6F8FA;
+  width: 200px;
+  height: 36px;
+  line-height: 36px;
+  padding: 8px 16px;
+  margin-right: 8px;
+}
+
+.modal__form > button {
+  color: #ffffff;
+  background-color: #2860E1;
+  width: 90px;
+  height: 36px;
+  padding: 8px 14px;
+  border-radius: 4px;
+}
