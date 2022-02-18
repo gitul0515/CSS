@@ -8,10 +8,8 @@ body {
   background-color: lightgrey;
   height: 100vh;
   font-family: 'Nunito Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   letter-spacing: 0em;
+  font-size: 14px;
 }
 
 h1 {
@@ -35,27 +33,24 @@ input {
 }
 
 .modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
   padding: 32px 40px;
   border-radius: 4px;
-  position: relative;
   text-align: center;
 }
 
 .modal__close-btn {
   position: absolute;
-  width: 11.67px;
-  height: 11.67px;
-  top: 12.17px;
-  right: 12.17px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal__close-btn img {
-  width: inherit;
-  height: inherit;
+  width: 20px;
+  height: 20px;
+  top: 8px;
+  right: 8px;
+  background: url(../assets/position/3_icon-close.svg) no-repeat center center;
+  background-size: contain;
 }
 
 .modal__title h1 {
@@ -83,6 +78,7 @@ input {
   line-height: 36px;
   padding: 8px 16px;
   margin-right: 8px;
+  border-radius: 4px;
 }
 
 .modal__form > button {
@@ -92,4 +88,6 @@ input {
   height: 36px;
   padding: 8px 14px;
   border-radius: 4px;
+  font-weight: 500;
+  line-height: 20px;
 }
