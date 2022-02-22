@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  background-color: #E5E5E5;
+  line-height: 20px;
+  letter-spacing: 0em;
+  color: #8492A6;
+}
+
+.profile {
+  background-color: #FFFFFF;
+  width: 386px;
+  border-radius: 16px;
+  text-align: center;
+  padding: 32px 40px;
+}
+
+.profile__user-photo {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+
+.profile__user-info {
+  margin-bottom: 32px;
+}
+
+.profile__user-name {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px;
+  color: #273444;
+  margin-bottom: 4px;
+}
+
+.profile__user-country {
+
+}
+
+.profile__details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__detail {
+
+}
+
+.profile__detail h2 {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.profile__detail span {
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 40px;
+  color: #0066FF;
+}
