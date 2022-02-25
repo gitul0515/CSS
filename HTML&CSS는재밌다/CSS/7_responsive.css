@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+h1 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  height: 100vh;
+  background: url(../assets/responsive/1_img-bg.jpg) no-repeat center center;
+  background-size: cover;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-button {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  background-color: #FFC82C;
+  padding: 28px 0;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: center;
+}
+
+.title {
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 63px;
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.title span {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.more-button {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid #FFFFFF;
+  border-radius: 16px;
+  padding: 16px 38px;
+}
