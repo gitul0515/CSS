@@ -10,21 +10,29 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
+  padding: 0;
 }
 
 h1 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans KR', sans-serif;
+  width: 100%;
   height: 100vh;
-  background: url(../assets/responsive/1_img-bg.jpg) no-repeat center center;
-  background-size: cover;
   color: #FFFFFF;
-  display: flex;
-  align-items: center;
 }
 
 .apply-button {
@@ -32,9 +40,8 @@ body {
   left: 0;
   top: 0;
   width: 100vw;
+  height: 80px;
   background-color: #FFC82C;
-  padding: 28px 0;
-
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
@@ -42,13 +49,20 @@ body {
   text-align: center;
 }
 
-.title {
+.landing {
+  background: url(../assets/responsive/1_img-bg.jpg) no-repeat center center;
+  background-size: cover;
   width: 100%;
+  height: 100%;
   text-align: center;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.title__text {
+.landing__title {
   font-size: 50px;
   font-style: normal;
   font-weight: 900;
@@ -57,46 +71,53 @@ body {
   margin-bottom: 32px;
 }
 
-.title__text span {
+.landing__title strong {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
-.title__button {
+.landing__button {
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   letter-spacing: -0.01em;
-  color: #FFFFFF;
   background: rgba(0, 0, 0, 0.5);
   border: 2px solid #FFFFFF;
   border-radius: 16px;
-  padding: 16px 38px;
+  width: 180px;
+  height: 56px;
+}
+
+.landing__button a {
+  color: #FFFFFF;
+}
+
+.add {
+  color: #000000;
 }
 
 @media screen and (max-width:767px) {
-  .body {
-    align-items: flex-end;
-  }
-
   .apply-button {
     top: auto; /* initial value */
     bottom: 0;
+    height: 64px;
   }
 
-  .title {
+  .landing {
     text-align: right;
+    align-items: flex-end;
   }
 
-  .title__text {
+  .landing__title {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 24px;
   }
 
-  .title__button {
+  .landing__button {
     font-size: 15px;
-    padding: 14px 37px;
+    width: 160px;
+    height: 52px;
   }
 }
