@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background-color: aliceblue;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.card {
+  background-color: #ffffff;
+  width: 840px;
+  max-width: 840px;
+  display: flex;
+  padding: 24px;
+}
+
+.card__photo {
+  flex-basis: 300px;
+  height: 200px;
+  background: url(../assets/background/img-house.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin-right: 24px;
+  border-radius: 6px;
+  position: relative;
+}
+
+.card__favorite-btn {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  border-radius: 50%;
+  background: url(../assets/background/icon-favorite.svg) no-repeat center center;
+  background-color: #ffffff;
+}
+
+.card__info {
+  background-color: aquamarine;
+}
+
