@@ -2,14 +2,21 @@
   box-sizing: border-box;
 }
 
+h1, h3, p {
+  margin: 0;
+}
+
 body {
   height: 100vh;
   margin: 0;
   background-color: aliceblue;
+  color: #151B26;
   font-family: 'Poppins', sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 20px;
+  letter-spacing: 0em;
 }
 
 button {
@@ -48,9 +55,70 @@ button {
   border-radius: 50%;
   background: url(../assets/background/icon-favorite.svg) no-repeat center center;
   background-color: #ffffff;
+  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .card__info {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
+  flex: 1;
+  margin: 0;
 }
 
+.card__info > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card__tag {
+  display: flex;
+  align-items: center;
+}
+
+.card__tag > strong {
+  width: 48px;
+  height: 22px;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 4px;
+  background: #92174D;
+  margin-right: 8px;
+  line-height: 22px;
+}
+
+.card__tag > h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #7D858F;
+}
+
+.card__review-score {
+  display: flex;
+  align-items: center;
+}
+
+.card__review-score > img {
+  display: block;
+  width: 15.5px;
+  margin-right: 3px;
+  transform: translateY(-0.5px);
+  font-size: 16px;
+}
+
+.card__review-score > p > span {
+  color: #7D858F;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-top: 8px;
+}
+
+.card__facility {
+  margin-top: 16px;
+  color: #7D858F;
+}
