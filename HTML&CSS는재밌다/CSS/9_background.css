@@ -55,16 +55,17 @@ button {
   border-radius: 50%;
   background: url(../assets/background/icon-favorite.svg) no-repeat center center;
   background-color: #ffffff;
+  background-size: 24px 24px;
   box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 .card__info {
   /* background-color: aquamarine; */
-  flex: 1;
+  flex-grow: 1;
   margin: 0;
 }
 
-.card__info > div {
+.card__info > header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -86,6 +87,7 @@ button {
   background: #92174D;
   margin-right: 8px;
   line-height: 22px;
+  text-transform: uppercase;
 }
 
 .card__tag > h3 {
@@ -95,19 +97,30 @@ button {
 }
 
 .card__review-score {
+  font-size: 16px;
   display: flex;
   align-items: center;
 }
 
-.card__review-score > img {
-  display: block;
-  width: 15.5px;
+.card__review-score > strong::before {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url(../assets/background/icon-star.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
   margin-right: 3px;
-  transform: translateY(-0.5px);
-  font-size: 16px;
+  position: relative;
+  top: 2px;
 }
 
-.card__review-score > p > span {
+.card__review-score > strong {
+  font-weight: 400;
+}
+
+.card__review-score > strong > span {
   color: #7D858F;
 }
 
@@ -119,6 +132,9 @@ button {
 }
 
 .card__facility {
-  margin-top: 16px;
+  font-size: 15px;
+
   color: #7D858F;
+  line-height: 23px;
+  margin-top: 16px;
 }
