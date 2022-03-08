@@ -2,29 +2,8 @@
   box-sizing: border-box;
 }
 
-h1, h3, p, dl, dd {
+h1, h3, p {
   margin: 0;
-}
-
-.sr-only {
-  position: absolute;
-  z-index: -99;
-  opacity: 0;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  /* 
-  width와 height 중 하나라도 0이면,
-  display:none과 동일한 효과다. 
-  스크린 리더가 읽지 못한다. 
-  */
-}
-
-button {
-  background-color: transparent;
-  outline: none;
-  border: none;
-  cursor: pointer;
 }
 
 body {
@@ -38,6 +17,13 @@ body {
   align-items: center;
   line-height: 20px;
   letter-spacing: 0em;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
 
 .card {
@@ -145,27 +131,12 @@ body {
   margin-top: 8px;
 }
 
-.card__detail {
+.sr-only {
+  op
+}
+
+.card__facility {
   font-size: 15px;
   color: #7D858F;
   margin-top: 16px;
-}
-
-.room-and-bed {
-  display: flex;
-}
-
-.amenities {
-  display: flex;
-  margin-top: 8px;
-}
-
-.card__detail dd span::after {
-  content: '·';
-  margin: 0 5px;
-}
-
-.card__detail dd span:last-of-type::after {
-  content: '';
-  margin: 0;
 }
